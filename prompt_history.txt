@@ -1,0 +1,4376 @@
+########## Final Prompt History ###################
+
+$$$$$$$$$$$ Team ToGun Prompt history $$$$$$$$$$$$$$
+
+################ First prompt for Planning #################
+
+Tech-AI-Thon Season 3 – Hackathon Overview
+
+My company is organizing a Tech AI Hackathon called Tech-AI-Thon Season 3, our flagship innovation challenge.
+
+Theme: Vibe Coding
+
+This theme emphasizes creativity, collaboration, and solving real business problems using AI and modern technologies.
+
+Highlights
+
+🏆 Prizes worth up to ₹1 Million
+
+💡 Opportunity to build real-world, high-impact solutions
+
+⏳ Sufficient time provided (no tight deadlines)
+
+Eligibility & Participation
+Who Can Participate?
+
+All Xebia employees (Tech and Non-Tech)
+
+Categories
+
+Participating teams must define their own problem statements from one of the following domains:
+
+Business problem statements
+
+Project-related problem statements
+
+Enablement function problem statements
+
+Event Process & Timeline
+
+No-Coding Battle: 11th & 12th January 2026 (30 hours continuous)
+
+The event will be conducted in person at all office locations.
+
+Participants must remain at their respective office locations for the entire duration.
+
+Leaving the office premises during the event is not allowed.
+
+12th January: Final presentation and prize distribution
+
+Mentorship
+
+After shortlisting, each team will be assigned a mentor, potentially from the Data & AI COE.
+
+Mentor Responsibilities
+
+Guide teams during mentorship sessions and the no-coding battle
+
+Help convert ideas into a working prototype
+
+Provide technical and strategic feedback
+
+Assist in evaluating the prototype
+
+Solution Evaluation & Selection Criteria
+
+After solution submission, evaluation will take place in two phases:
+
+Phase 1: Panel Evaluation
+
+Two jury members will assess each team
+
+Multiple panels will run in parallel
+
+Only teams with a working demo will be evaluated
+
+Phase 2: Final Jury Evaluation
+
+Top teams will present to the entire jury
+
+Final decisions for winner and runners-up will be made here
+
+Evaluation Criteria
+
+Prompt clarity and detailing
+
+Novelty of the idea
+
+Feasibility, practicability, sustainability, scale of impact, and user experience
+
+Real-world applicability
+
+Speed of execution potential
+
+Only real-time working models are eligible
+
+No PPTs or sample projects will be accepted for final evaluation
+
+Rules, Guardrails & Compliance
+
+All work must be done within the 30-hour event window
+
+Verification will be done using:
+
+Git commit timestamps
+
+File metadata
+
+Any work done outside the event window may lead to penalty or disqualification
+
+Start from a clean repository/folder created at event start
+
+No pre-built repos, old codebases, or private accelerators allowed
+
+Maintain a prompt history (mandatory):
+
+/prompt-log/ folder or PROMPT_LOG.md
+
+Format: Prompt → Change → Impact
+
+Minimum documentation:
+
+README must include setup steps, run instructions, solution overview, and demo flow
+
+Security:
+
+No secrets or API keys in the repository
+
+Use .env.example
+
+No real personal data
+
+Tooling:
+
+Any vibe-coding tool allowed
+
+Cursor recommended
+
+Use free credits; contact mentors if credits expire
+
+Fairness:
+
+No external developers
+
+Open-source libraries allowed with proper attribution
+
+Intellectual Property & Prizes
+
+The IP of the winning idea will belong to Xebia IT Architects
+
+Selected ideas may be supported for further development
+
+Ideas must be new and not previously submitted in any event or program
+
+Awards:
+
+🥇 Winner: ₹5,00,000
+
+🥈 1st Runner-Up: ₹3,00,000
+
+🥉 2nd Runner-Up: ₹2,00,000
+
+All other teams will receive participation certificates
+
+In case of a tie, the jury’s decision will be final
+
+Scope Clarification & Realism (Important)
+
+The documents shared so far are AI-generated and aspirational.
+
+It may not be feasible to build everything mentioned within the hackathon timeframe.
+
+The scope will be realistic, focused, and demo-driven.
+
+Deployment & Runtime Clarification
+
+No production deployment is required.
+
+All demos will run locally.
+
+Only one voice agent will run at a time during demo/testing.
+
+When we say “deploy a voice agent”, we simply mean starting/running the agent.
+
+From a user’s perspective:
+
+After configuring the agent (prompt, voice, model, tools, etc.), the user clicks Test → agent is running.
+
+Clicking Deploy will also mean → agent is running.
+
+Backend-wise, both actions trigger the same runtime start.
+
+Agent Runtime Approach (Design Consideration)
+
+Technically, we can choose one of the following approaches:
+
+Single generic agent runtime, where user-specific configurations (prompt, voice, model, tools, APIs) are loaded dynamically at runtime
+
+Spin up a new agent instance once the configuration is finalized
+
+We will evaluate and choose the approach that best balances simplicity, reliability, and demo success.
+
+Tools & Integrations (Planned Scope)
+
+While many integrations (e.g., Finacle) are mentioned in the aspirational document, we will not build all of them.
+
+UI Strategy
+
+Only a few real integrations will be functional
+
+Others will be displayed as “Coming Soon”
+
+Backend Strategy
+
+Pre-create a small set of BFSI-related tools/functions
+
+Connect them to a mock database
+
+Expose these tools in the UI for agent configuration
+
+Custom Tool Support
+
+We will support custom tool creation, for example:
+
+[+ Add Custom Tool] → API endpoint configuration
+
+Implementation:
+
+One generic tool that:
+
+Accepts API endpoint configuration
+
+Calls the API
+
+Returns the response to the agent
+
+MCP Integration (Optional but Strategic)
+
+If feasible, attach one MCP server (e.g., Google Calendar booking)
+
+Purpose: demonstrate MCP usage, not full-scale integration
+
+All remaining integrations will be UI mockups marked as “Coming Soon.”
+
+Platform Vision: Xebia Voice AI Agentic Studio
+
+The core deliverable is Xebia Voice AI Agentic Studio, envisioned as our first internal product.
+
+Key Objective
+
+Enable users to:
+
+Configure voice agents via UI
+
+Customize:
+
+Prompt
+
+Voice
+
+Model
+
+Tools
+
+Run (“deploy”) the agent with exactly that configuration
+
+Agent Templates
+
+Prebuilt templates stored with:
+
+Template name
+
+Prompt
+
+Voice
+
+Tools
+
+Selecting a template auto-populates fields
+
+Users can edit everything before running the agent
+
+Independent Production-Grade Voice Agent (Differentiation)
+
+In addition to the studio, we plan to build one fully production-grade BFSI voice agent, completely independent of the studio.
+
+Purpose
+
+Showcase a real, end-to-end BFSI use case
+
+Demonstrate multiple agents / workflows solving a complex business problem
+
+Make it feel enterprise-ready, not a toy demo
+
+Capabilities
+
+Voice-based interaction
+
+Real tool usage (mocked or limited scope)
+
+Possibly orchestrated using:
+
+Custom functions, or
+
+n8n workflow
+
+Live Phone Call Demo
+
+Outbound calls only
+
+Use Twilio (one free phone number via free credits)
+
+SIP trunks integrated with LiveKit
+
+During demo:
+
+Place a real outbound call to a jury member
+
+Jury member talks to the agent over a real phone call
+
+This telephone voice agent and the voice agent studio will remain independent systems.
+
+Differentiation & Scope Philosophy
+
+We are not trying to build a startup
+
+We are demonstrating:
+
+The power of vibe coding
+
+What can realistically be built in ~30 hours
+
+Scalability is out of scope
+
+Only one agent runs at a time
+
+My Profile & Goal
+
+Participation: Solo
+
+Role: Generative AI Engineer
+
+Goal: To win this hackathon
+
+Preparation invested in:
+
+Problem statement selection
+
+Market research
+
+Technical research
+
+Designing a real, executable, high-impact solution
+
+I want you to act as my mentor, solution architect, and strategic reviewer throughout this process.
+
+Current Status
+Completed
+
+Finalized problem statement
+
+High-level clarity on:
+
+What to build
+
+Core features
+
+Tentative tech stack
+
+Pending
+
+Detailed system architecture
+
+Execution-level design decisions
+
+What I Need From You
+
+I want your help with architecture, planning, and evaluation alignment.
+
+Specifically, I need you to:
+
+Deeply understand my problem statement
+
+Validate alignment with judging criteria
+
+Identify gaps, risks, and weak points from a jury’s perspective
+
+Suggest:
+
+Scope refinements
+
+Architecture improvements
+
+Feature prioritization
+
+Guide me toward a real-time, working demo
+
+Think like a jury member + startup architect + GenAI expert
+
+Your feedback should be honest, critical, and strategic, with the single objective of maximizing my chances of winning.
+
+
+
+
+######################################### prompt 2 ###############################################################3##############
+
+Thanks. we have less time left and in between, We just had a detailed mentorship session with the mentors, and they suggested something different from what we were originally thinking. They listened carefully to everything we shared and mentioned that, while the idea is solid, most banking and insurance clients do not allow third-party voice agents to be integrated with their systems due to data security and compliance concerns. Typically, such solutions must be built within the client’s own environment, which means our original BFSI-focused approach may not realistically work with actual banks or insurance companies. Instead, they suggested building a voice agent for internal Xebia use. Many employees do not want to read long documents and would prefer direct, conversational access to information. Additionally, new employees or team members joining projects often lack context about:
+ - The client
+ - The project
+ - Processes, tools, and internal knowledge An internal voice agent could help address this by:
+ - Answering questions conversationally
+ - Helping new joiners ramp up faster
+ - Assisting existing employees with project-, client-, and organization-related knowledge So, instead of focusing on BFSI, the idea is to build a Xebia-internal voice AI. Similar to how we had prebuilt templates earlier, these templates would now be Xebia-internal, project-specific, or domain-specific. Earlier, we discussed building two products, and I think we can keep that structure, but change the use case from BFSI to Xebia-internal. Specifically:
+Build a Voice AI Studio platform
+Build a separate, production-grade Xebia Voice Agent that can answer general Xebia queries or be configured for a specific internal domain We can position this as:
+- A centralized platform where Xebia can create and manage all internal voice bots
+ - Access to the studio/dashboard would be limited to managers or specific teams responsible for creating and managing bots for their teams, domains, or projects
+ - A place to create project-specific or domain-specific agents
+ - A system to configure, run, and monitor multiple internal agents (even if only one runs at a time during the demo)
+so even if no Wow Factor” Internal Version, its okay
+We will not integrate voice calls with the phone for now due to time constraints. 
+ Knowledge Base Dependency * We will implement a generic RAG (Retrieval-Augmented Generation) pipeline on the backend. * Since only one voice agent will run at a time, the UI will allow users to:    * Upload documents or PDFs under the active agent    * Perform RAG over those documents * When the agent session ends:    * The uploaded documents and vector embeddings will be deleted * This ensures that, at least for the demo, the agent can answer questions directly from provided documents or a temporary knowledge base, making the responses accurate and credible.
+
+
+################# prompt 3 #################################################################################################################
+
+Now we need to use Cursor for the entire development, and all development must be done using vibe coding only. In the Cursor AI assistant, I have already attached the problem statement you shared earlier as context. Now I need a single, detailed prompt so that Cursor can: 1. Fully understand what we want to build 2. Create a detailed execution plan 3. Start implementing the solution step by step The prompt should clearly capture: * The full context * The scope and constraints * The architecture direction * What is in our mind conceptually
+
+you knew we have to create 2 products, so lets keep them separate as both are independent. so give me this for both separately. so i will build it independently with separate project window. so Please help me write this comprehensive prompt that I can directly give to Cursor.
+
+
+########################################### prompt 4 #################################################################################
+
+Thanks. Now we will build the beautiful UI using Lovable, and handle the backend and integrations using Cursor. So please help me with a detailed prompt for generating the UI. Make sure it looks production-ready and visually appealing. Once Lovable develops the UI, we will move that code into Cursor to build the backend and complete the integrations. We also need authentication, and for that, please ask to use. Additionally, we need an informative website for this voice bot. This website should include buttons such as Login, Sign Up, or Get Started, which will redirect users to the dashboard. I also think we need a separate UI for the web interface where users will interact with the voice bot. We will create this separately, so please provide a separate prompt for that UI as well.
+
+##################################### prompt 5for lovable to create UI ############################################################
+
+
+Prompt : Voice Chat Interface (Separate App) for Lovable
+# PROJECT: Xebia Voice AI - Voice Chat Interface
+
+## OVERVIEW
+Create an immersive, voice-first chat interface where users interact with their AI voice agents. This is a SEPARATE, focused application - think of it as the "conversation window" that opens when you want to talk to an agent.
+
+This should feel like talking to a real person, not using a chatbot.
+
+## DESIGN INSPIRATION
+- Style: Futuristic yet approachable (like sci-fi movie AI interfaces)
+- Reference: Google Gemini Live, ChatGPT voice mode, Her (movie) interface
+- Vibe: Immersive, calm, focused, premium
+- Color Scheme:
+  - Background: Dark gradient (#0a0e27 to #1a1f3a)
+  - Accents: Cyan/electric blue (#00d4ffContinue6:11 PM)
+
+Text: White/light gray
+Agent messages: Subtle gradient glow
+Typography: Modern, clean (Inter or SF Pro)
+
+LAYOUT (FULL SCREEN, IMMERSIVE)
+┌────────────────────────────────────────────┐
+│                                            │
+│           [Agent Avatar/Icon]              │
+│                                            │
+│           Agent Name                       │
+│           "Ready to help"                  │
+│                                            │
+│                                            │
+│        [LARGE MICROPHONE BUTTON]           │
+│         (Pulsing animation)                │
+│                                            │
+│                                            │
+│      [Conversation Transcript]             │
+│      (Scrollable, fades in/out)            │
+│                                            │
+│                                            │
+│      [Text input - minimal]                │
+│                                            │
+└────────────────────────────────────────────┘
+VISUAL HIERARCHY (TOP TO BOTTOM)
+1. TOP BAR (Minimal, Floating)
+Content:
+
+Back arrow (left) - Returns to dashboard
+Agent name (center) - "HR Assistant"
+Menu icon (right) - Options (End session, Settings)
+
+Styling:
+
+Semi-transparent background (glassmorphism)
+Blur effect
+Floating above main content
+Fades in on scroll, always visible on mobile
+
+2. AGENT PRESENCE (CENTER TOP)
+Agent Avatar:
+
+Large circular avatar (120px)
+Animated gradient ring around it (pulsing gently)
+Agent icon or initials inside
+Glow effect
+
+Agent Status:
+
+Name: "HR Assistant" (below avatar)
+Status line: "Ready to help" | "Listening..." | "Thinking..." | "Speaking..."
+Status changes color based on state:
+
+Ready: Cyan
+Listening: Blue pulsing
+Thinking: Purple pulsing
+Speaking: Green pulsing
+
+
+
+Styling:
+
+Centered
+Graceful animations on state change
+Smooth color transitions
+
+3. MICROPHONE BUTTON (CENTER, HERO ELEMENT)
+Appearance:
+
+LARGE circular button (200px on desktop, 150px on mobile)
+Microphone icon in center
+Multiple concentric rings that pulse outward
+Gradient fill (cyan to blue)
+Soft shadow and glow
+
+States:
+Idle State:
+
+Gentle pulse animation (scale 1.0 to 1.05)
+Tooltip: "Tap to speak"
+
+Listening State:
+
+Expanding ripple effect (like sonar)
+Red recording indicator
+Icon changes to waveform
+Tooltip: "Listening..."
+
+Processing State:
+
+Spinning loader animation
+Gradient rotation
+Tooltip: "Thinking..."
+
+Speaking State:
+
+Audio wave animation (bars bouncing)
+Green glow
+Tooltip: "Speaking..."
+
+Styling:
+
+Smooth transitions (0.3s ease)
+Haptic feedback on mobile (vibration)
+Accessibility: Can be triggered by spacebar
+
+4. AUDIO VISUALIZER (AROUND MICROPHONE)
+When User Speaks:
+
+Circular waveform around button
+Bars react to audio input amplitude
+Color: Blue gradient
+Smooth, fluid animation
+
+When Agent Speaks:
+
+Similar waveform but different color (green/cyan)
+Synced with actual audio output
+Creates sense of "listening" and "responding"
+
+Styling:
+
+Canvas-based animation
+60 FPS smooth
+Blur effect for dreamy look
+
+5. CONVERSATION TRANSCRIPT (BELOW BUTTON)
+Layout:
+
+Scrollable area (max-height: 50vh)
+Auto-scrolls to latest message
+Fades in as messages appear
+
+Message Bubbles:
+User Messages (Right-aligned):
+
+Background: Semi-transparent white (glassmorphism)
+Text: Dark color
+Border: Subtle cyan glow
+Timestamp: Small, muted (bottom right)
+Max-width: 70%
+
+Agent Messages (Left-aligned):
+
+Background: Gradient (dark blue to purple, semi-transparent)
+Text: White
+Border: Soft glow
+Source badge: Small pill below message
+
+"📄 employee_handbook.pdf"
+Clickable (could open source viewer)
+
+
+Timestamp: Small, muted
+Max-width: 70%
+
+Typing Indicator:
+
+Three dots bouncing
+Appears when agent is thinking
+Same styling as agent message
+
+Styling:
+
+Messages fade in from bottom
+Smooth animations
+Generous padding
+Clear separation between messages
+Timestamps only show on hover (desktop)
+
+6. TEXT INPUT (BOTTOM, MINIMAL)
+Appearance:
+
+Floating input bar
+Glassmorphism background
+Centered, width: 80% max
+Rounded corners
+Subtle shadow
+
+Content:
+
+Text input: "Or type your question..."
+Send button (paper plane icon)
+Voice button (microphone icon) - alternative trigger
+
+Behavior:
+
+Expands on focus
+Sends on Enter
+Shift+Enter for new line
+Auto-grows with content (up to 5 lines)
+
+Styling:
+
+Blur background
+White text
+Icon buttons: Hover glow
+Smooth focus animation
+
+7. BACKGROUND (AMBIENT)
+Gradient Background:
+
+Dark gradient (top to bottom)
+Colors: Deep navy (#0a0e27) to dark purple (#1a1f3a)
+Subtle animated mesh gradient (very slow movement)
+Creates depth and immersion
+
+Floating Particles:
+
+Small, subtle dots floating slowly
+Opacity: Very low (0.1-0.2)
+Creates ambient tech feel
+Not distracting
+
+INTERACTION FLOWS
+Flow 1: Voice Query
+
+User clicks large microphone button
+
+Button state changes to "listening"
+Ripple animation starts
+Audio visualizer appears
+Haptic feedback (mobile)
+
+
+User speaks: "What's the leave policy?"
+
+Voice visualizer reacts to speech
+Audio levels shown in real-time
+User sees they're being heard
+
+
+User stops speaking (or clicks button again)
+
+Button changes to "processing"
+Spinner animation
+Speech-to-text conversion happening
+
+
+Transcript appears
+
+User message bubble slides in from right
+Shows: "What's the leave policy?"
+Timestamp appears
+
+
+Agent processes (RAG pipeline in background)
+
+Typing indicator appears (left side)
+Status updates to "Thinking..."
+1-3 seconds delay
+
+
+Agent responds
+
+Typing indicator disappears
+Agent message bubble slides in from left
+Text appears (could type out character-by-character)
+Source badge shows below
+Status changes to "Speaking..."
+
+
+Audio plays
+
+Agent's voice speaks the response
+Audio visualizer shows waveform
+User can pause/stop if needed
+
+
+Ready for next question
+
+Status returns to "Ready to help"
+Button returns to idle state
+User can ask follow-up
+
+
+
+Flow 2: Text Query
+
+User clicks text input
+
+Input expands slightly
+Focus glow appears
+
+
+User types: "What about parental leave?"
+
+Text appears in input
+Character count (optional)
+
+
+User hits Enter or clicks Send
+
+Input clears
+Message appears in transcript (right side)
+Same agent processing flow as voice
+
+
+Agent responds
+
+Same as voice flow
+Audio still plays (can be toggled off in settings)
+
+
+
+Flow 3: Interruption
+
+Agent is speaking
+
+Audio visualizer active
+Status: "Speaking..."
+
+
+User clicks microphone (or starts speaking)
+
+Agent audio stops immediately
+Status changes to "Listening..."
+User can ask new question
+Previous context maintained
+
+
+
+SPECIAL UI ELEMENTS
+Source Citation Modal
+Trigger: Click on source badge
+Content:
+
+Document name
+Relevant excerpt (highlighted)
+Page/section reference
+"View Full Document" link
+
+Styling:
+
+Modal overlay
+Card in center
+Close button
+Smooth fade in/out
+
+Settings Panel (Slide-out)
+Trigger: Menu icon (top right)
+Content:
+
+Voice speed: Slider (0.5x to 2x)
+Voice selection: Dropdown (if multiple voices available)
+Auto-play responses: Toggle
+Show timestamps: Toggle
+End session: Button (red)
+
+Styling:
+
+Slides from right
+Blur background overlay
+Glassmorphism panel
+Smooth animation
+
+End Session Confirmation
+Trigger: "End Session" in settings
+Modal Content:
+
+Warning: "End this conversation?"
+Info: "Conversation history will be saved"
+Actions:
+
+"End Session" (red button)
+"Cancel" (secondary)
+
+
+
+On End:
+
+Fade out animation
+Redirect to dashboard
+Show success toast: "Session ended"
+
+RESPONSIVE DESIGN
+Mobile (<768px):
+
+Full-screen experience
+Larger touch targets
+Microphone button: 150px
+Transcript takes more vertical space
+Text input: Fixed at bottom
+Simplified animations (performance)
+
+Tablet (768-1024px):
+
+Similar to mobile but more breathing room
+Microphone button: 180px
+Can show more transcript
+
+Desktop (>1024px):
+
+Centered content (max-width: 800px)
+Microphone button: 200px
+Side margins for aesthetics
+Full animation effects
+
+ACCESSIBILITY
+
+Keyboard shortcuts:
+
+Space: Toggle microphone
+Esc: Stop agent speaking
+Enter: Send text message
+
+
+Screen reader announcements for state changes
+High contrast mode support
+Focus indicators
+ARIA labels
+
+ANIMATIONS & MICRO-INTERACTIONS
+Entry Animation (Page Load)
+
+Background fades in
+Agent avatar scales up from center
+Microphone button fades in with pulse
+Text input slides up from bottom
+Total duration: 1 second
+
+Message Animations
+
+User message: Slide from right, fade in
+Agent message: Slide from left, fade in
+Typing indicator: Bounce animation
+Duration: 0.3s ease-out
+
+Microphone States
+
+Idle → Listening: Scale up, color shift
+Listening → Processing: Rotate, gradient shift
+Processing → Speaking: Ripple out, color change
+All transitions: 0.4s smooth
+
+Audio Visualizer
+
+60 FPS canvas animation
+Reactive to actual audio data
+Smooth interpolation between bars
+Glow effect on peaks
+
+SOUND DESIGN (OPTIONAL)
+Subtle Sound Effects:
+
+Microphone activate: Soft "beep"
+Message sent: Subtle "swoosh"
+Message received: Gentle "ding"
+Error: Low "bonk"
+
+Note: Keep very subtle, can be toggled off
+ERROR STATES
+No Microphone Access
+
+Show modal: "Microphone access required"
+Instructions to enable in browser
+Fallback: "Use text input instead"
+
+No Response
+
+After 10 seconds, show: "Taking longer than usual..."
+After 30 seconds: "Something went wrong. Please try again."
+Retry button
+
+Network Error
+
+Toast notification: "Connection lost"
+Retry automatically
+Show reconnection status
+
+LOADING STATES
+Initial Load
+
+Skeleton loader for agent avatar
+Pulsing placeholder for button
+Shimmer effect
+
+Processing Query
+
+Spinner on microphone button
+Typing indicator in transcript
+Status text updates
+
+EMPTY STATES
+No Conversation Yet
+
+Large microphone button prominent
+Text: "Ask me anything about Xebia"
+Suggested questions (3-4 bubbles):
+
+"What's the leave policy?"
+"How do I submit expenses?"
+"What's our tech stack?"
+"Tell me about benefits"
+
+
+Click suggestion to auto-fill and send
+
+Styling:
+
+Subtle animation on suggestions
+Hover: Glow effect
+Click: Ripple + send
+
+TECHNICAL REQUIREMENTS
+Tech Stack:
+
+React with TypeScript
+Tailwind CSS
+Framer Motion (animations)
+Canvas API (visualizer)
+Web Speech API (voice input)
+Web Audio API (visualizer)
+Supabase (auth check)
+
+Components:
+
+AgentAvatar
+MicrophoneButton
+AudioVisualizer
+MessageBubble
+TranscriptView
+TextInput
+SettingsPanel
+SourceModal
+
+State Management:
+
+Conversation messages
+Agent status
+Audio playing state
+Microphone active state
+User preferences
+
+DATA FLOW (MOCK FOR LOVABLE)
+Mock Responses:
+javascriptconst mockResponses = {
+  "leave policy": {
+    answer: "Xebia offers 26 weeks of paid parental leave for primary caregivers...",
+    source: "employee_handbook.pdf"
+  },
+  // ... more
+};
+Simulate Delays:
+
+Speech-to-text: 500ms
+Agent thinking: 1-2 seconds
+Text-to-speech: Immediate playback
+
+SUCCESS CRITERIA
+✅ Feels premium and immersive
+✅ Voice interaction is smooth and natural
+✅ Beautiful animations throughout
+✅ Transcript is readable and elegant
+✅ Works perfectly on mobile
+✅ No lag or jank (60 FPS)
+✅ Accessible and keyboard-friendly
+✅ Looks like a product from the future
+Build an interface that makes judges say "I want to use this right now!"
+BEGIN!
+
+---
+
+## Summary
+
+You now have **3 comprehensive prompts** for Lovable:
+
+1. **Marketing Website** - Landing page with auth
+2. **Dashboard UI** - Main application for managing agents
+3. **Voice Chat Interface** - Immersive conversation UI
+
+After Lovable generates these UIs, you'll move the code to Cursor and integrate:
+- Supabase Auth (already specified in prompts)
+- Backend RAG pipeline
+- Real API endpoints
+- Voice processing
+
+Each prompt is detailed enough for Lovable to create production-quality UI that you can then connect to your backend logic in Cursor!
+
+
+######################################################### prompt 6 for lovable to create  Voice AI Studio# #############################################
+
+Prompt 1: Marketing Website (Landing Page) for Lovable
+# PROJECT: Xebia Voice AI Studio - Marketing Website
+
+## OVERVIEW
+Create a stunning, modern marketing website for "Xebia Voice AI Studio" - an internal platform that enables Xebia employees to create and manage AI voice agents for knowledge access and onboarding.
+
+This is the PUBLIC-FACING landing page that introduces the product and leads users to sign up or log in.
+
+## DESIGN INSPIRATION
+- Style: Modern SaaS landing page (think Vercel, Linear, Stripe)
+- Vibe: Professional, innovative, trustworthy, cutting-edge
+- Color Scheme: 
+  - Primary: Deep blue (#1e40af) - trust, enterprise
+  - Accent: Cyan/teal (#06b6d4) - innovation, AI
+  - Background: White with subtle gradients
+  - Dark sections: Navy blue (#0f172a)
+- Typography: Clean, modern sans-serif (Inter or similar)
+
+## PAGE STRUCTURE
+
+### 1. NAVIGATION BAR (Sticky)
+**Layout:**
+- Logo: "Xebia Voice AI Studio" with icon (left)
+- Menu items (center): Features | Use Cases | How It Works | Pricing
+- CTA buttons (right): "Login" (ghost button) | "Get Started" (primary button)
+
+**Styling:**
+- Transparent background initially
+- Becomes white with subtle shadow on scroll
+- Smooth transitions
+
+### 2. HERO SECTION (Above the Fold)
+**Content:**
+- Main Headline: "Your Company Knowledge, One Conversation Away"
+- Subheadline: "Create AI voice agents that answer employee questions instantly. No coding required."
+- Two CTAs: 
+  - Primary: "Get Started Free" (large, gradient button)
+  - Secondary: "Watch Demo" (with play icon)
+- Hero Visual: 
+  - Animated mockup of the voice interface
+  - Floating UI elements showing voice waves, transcript, documents
+  - Subtle floating animation
+
+**Styling:**
+- Large, bold headline (gradient text effect)
+- Centered layout
+- Background: Subtle gradient mesh or abstract shapes
+- Animated elements (floating, pulsing)
+
+### 3. SOCIAL PROOF SECTION
+**Content:**
+- "Trusted by teams across Xebia"
+- Stats in cards:
+  - "1,000+ Employees" (with icon)
+  - "15,000+ Questions Answered" (with icon)
+  - "95% Accuracy Rate" (with icon)
+  - "3 Second Avg Response" (with icon)
+
+**Styling:**
+- 4-column grid on desktop, 2-column on mobile
+- Cards with subtle hover effects
+- Icons: Modern, minimal line icons
+- Numbers: Large, bold
+- Labels: Small, muted
+
+### 4. PROBLEM SECTION
+**Content:**
+- Headline: "The Knowledge Access Crisis"
+- Three problem cards:
+  1. "Information Overload" - Icon: Stack of documents
+     - "Employees waste 5+ hours/week searching for information in Confluence, Slack, and emails"
+  2. "Slow Onboarding" - Icon: Clock
+     - "New joiners take 2-3 weeks to become productive, asking same questions repeatedly"
+  3. "Knowledge Silos" - Icon: Lock
+     - "Critical information locked in people's heads and scattered documents"
+
+**Styling:**
+- 3-column grid
+- Cards with icons at top
+- Light background with border
+- Subtle shadow on hover
+
+### 5. SOLUTION SECTION (How It Works)
+**Content:**
+- Headline: "Create Voice Agents in Minutes, Not Months"
+- Three-step process:
+  
+  **Step 1: Choose Template**
+  - Icon/Illustration: Template library grid
+  - Text: "Select from pre-built templates for onboarding, HR, tech support, or create custom agents"
+  
+  **Step 2: Upload Knowledge**
+  - Icon/Illustration: Document upload
+  - Text: "Drag and drop PDFs, Word docs, or wiki pages. We handle the rest."
+  
+  **Step 3: Deploy & Share**
+  - Icon/Illustration: Rocket/Deploy
+  - Text: "Instant deployment. Employees start asking questions immediately via voice or text."
+
+**Styling:**
+- Timeline or stepped layout with connecting lines
+- Large step numbers (1, 2, 3)
+- Illustrations or mockups for each step
+- Alternating left-right layout (zigzag)
+
+### 6. FEATURES SECTION
+**Content:**
+- Headline: "Everything You Need in One Platform"
+- Feature grid (2x3):
+
+  1. **Voice-First Interface** (Icon: Microphone)
+     - "Speak naturally, get instant answers with AI-powered voice recognition"
+  
+  2. **Accurate Answers** (Icon: Target)
+     - "RAG-powered search ensures responses come from your actual documents"
+  
+  3. **Source Attribution** (Icon: Link)
+     - "Every answer shows exactly which document it came from for transparency"
+  
+  4. **Multi-Agent Platform** (Icon: Grid)
+     - "Create unlimited specialized agents for different teams or use cases"
+  
+  5. **Real-Time Analytics** (Icon: Chart)
+     - "Track usage, popular questions, and measure impact with detailed dashboards"
+  
+  6. **Enterprise Security** (Icon: Shield)
+     - "Session-based knowledge with automatic cleanup. Your data stays private."
+
+**Styling:**
+- 3-column grid (2 rows)
+- Icon at top of each card
+- Hover effect: lift and subtle glow
+- Gradient borders or backgrounds
+
+### 7. DEMO SECTION (Interactive)
+**Content:**
+- Headline: "See It In Action"
+- Large mockup/screenshot of the voice interface
+- Animated transcript showing sample conversation:
+  - User: "What's the leave policy for parental leave?"
+  - Agent: "Xebia offers 26 weeks of paid parental leave..."
+  - Source: "Employee Handbook (p. 12)"
+- Play button overlay
+
+**Styling:**
+- Dark background section
+- Centered mockup with shadow and glow
+- Animated typing effect for transcript
+- Glassmorphism effect on UI elements
+
+### 8. USE CASES SECTION
+**Content:**
+- Headline: "Built for Every Team"
+- Three use case cards:
+  
+  1. **HR & People Ops** (Icon: Users)
+     - "Answer policy questions, benefits inquiries, and HR processes 24/7"
+  
+  2. **Engineering Teams** (Icon: Code)
+     - "Tech stack guidance, coding standards, and tool documentation at fingertips"
+  
+  3. **Project Onboarding** (Icon: Rocket)
+     - "Ramp up new joiners 10x faster with instant project context"
+
+**Styling:**
+- 3-column grid
+- Image/icon at top
+- Hover: Scale up slightly
+- Different accent colors for each card
+
+### 9. TESTIMONIALS SECTION
+**Content:**
+- Headline: "Loved by Xebia Teams"
+- Three testimonial cards:
+  
+  1. "Cut onboarding time from 2 weeks to 3 days. New engineers are productive immediately."
+     - Sarah Chen, Engineering Manager
+  
+  2. "No more repetitive Slack questions. HR team saves 15 hours/week answering the same queries."
+     - Raj Kumar, HR Director
+  
+  3. "Game changer for client projects. Team members get instant context without interrupting others."
+     - Maria Santos, Project Lead
+
+**Styling:**
+- Carousel or 3-column grid
+- Profile pictures (can use placeholder avatars)
+- Quote marks icon
+- Star ratings (5 stars)
+- Company role in muted text
+
+### 10. PRICING SECTION (Simple)
+**Content:**
+- Headline: "Simple, Transparent Pricing"
+- One plan card (for internal use):
+  - "Internal Use - Free"
+  - "For all Xebia employees"
+  - Checkmarks:
+    ✓ Unlimited agents
+    ✓ Unlimited queries
+    ✓ Up to 50 documents per agent
+    ✓ Voice & text interface
+    ✓ Real-time analytics
+    ✓ Full support
+  - CTA: "Get Started"
+
+**Styling:**
+- Single centered card with gradient border
+- Large price (Free)
+- Feature list with checkmarks
+- Prominent CTA button
+
+### 11. CTA SECTION (Final Push)
+**Content:**
+- Headline: "Ready to Transform Knowledge Access?"
+- Subtext: "Join 1,000+ Xebia employees using Voice AI Studio"
+- Large CTA: "Get Started Now" (button)
+- Small text: "No credit card required • Set up in 5 minutes"
+
+**Styling:**
+- Gradient background
+- Centered content
+- Large, prominent button
+- Subtle animation (pulse or glow)
+
+### 12. FOOTER
+**Content:**
+- Left: Logo + tagline
+- Middle columns:
+  - Product: Features, Use Cases, Pricing
+  - Company: About, Careers, Contact
+  - Resources: Documentation, Support, Blog
+- Right: Social icons (LinkedIn, Twitter, GitHub)
+- Bottom: Copyright © 2026 Xebia
+
+**Styling:**
+- Dark background (#0f172a)
+- White/gray text
+- Grid layout
+- Subtle hover effects on links
+
+## INTERACTIVE ELEMENTS
+
+### Animations & Micro-interactions:
+1. **Hero Section:**
+   - Floating voice wave animation
+   - Gradient text shimmer on headline
+   - Buttons: Hover lift + glow
+
+2. **Feature Cards:**
+   - Hover: Lift + shadow increase
+   - Icon: Subtle rotation or scale on hover
+
+3. **Demo Section:**
+   - Auto-playing transcript animation
+   - Pulsing microphone button
+
+4. **Scroll Animations:**
+   - Fade in on scroll for each section
+   - Stats counter animation when visible
+
+5. **Buttons:**
+   - Primary: Gradient background, hover scale
+   - Secondary: Border animation on hover
+
+## AUTHENTICATION INTEGRATION
+
+**Use Supabase Auth** for authentication:
+- Sign up flow
+- Login flow  
+- OAuth options (Google, Microsoft for Xebia emails)
+- Password reset
+
+**Button Actions:**
+- "Get Started" → Sign up modal/page
+- "Login" → Login modal/page
+- After auth → Redirect to `/dashboard`
+
+## RESPONSIVE DESIGN
+
+**Breakpoints:**
+- Mobile: < 768px (single column, stacked)
+- Tablet: 768px - 1024px (2 columns)
+- Desktop: > 1024px (full layout)
+
+**Mobile Considerations:**
+- Hamburger menu for navigation
+- Stacked sections (no side-by-side)
+- Larger touch targets for buttons
+- Simplified animations
+
+## TECHNICAL REQUIREMENTS
+
+**Tech Stack:**
+- React with TypeScript
+- Tailwind CSS for styling
+- Framer Motion for animations
+- Supabase for authentication
+- React Router for navigation
+
+**Components to Create:**
+- Navbar (sticky)
+- Hero section
+- Feature cards
+- Testimonial carousel
+- Footer
+- Auth modals (login/signup)
+- Button components
+- Section container
+
+**Routing:**
+- `/` - Landing page
+- `/login` - Login page (can be modal)
+- `/signup` - Sign up page (can be modal)
+- `/dashboard` - Protected route (redirect after login)
+
+## DESIGN TOKENS
+Colors:
+
+primary-900: #1e3a8a
+primary-600: #2563eb
+accent-500: #06b6d4
+accent-600: #0891b2
+dark-900: #0f172a
+dark-800: #1e293b
+gray-100: #f1f5f9
+white: #ffffff
+
+Spacing:
+
+section-padding: py-20 md:py-32
+container-max: max-w-7xl mx-auto px-4
+
+Typography:
+
+h1: text-5xl md:text-7xl font-bold
+h2: text-3xl md:text-5xl font-bold
+h3: text-2xl md:text-3xl font-semibold
+body: text-base md:text-lg
+small: text-sm
+
+Shadows:
+
+card: shadow-lg hover:shadow-xl
+button: shadow-md hover:shadow-lg
+
+
+## ASSETS NEEDED
+
+**Icons:** Use Lucide React icons
+- Microphone, FileText, Zap, Shield, Users, Code, BarChart, Rocket, Target, Link, Play, Check, ArrowRight
+
+**Images/Illustrations:**
+- Hero mockup (voice interface screenshot)
+- Feature illustrations (can be abstract shapes or mockups)
+- Avatar placeholders for testimonials
+
+**Logo:** Create simple text-based logo with icon (microphone + AI element)
+
+## CALL-TO-ACTION FLOW
+
+1. User lands on page
+2. Impressed by hero and features
+3. Clicks "Get Started"
+4. Supabase sign up modal appears
+5. User signs up (email + password OR Google OAuth)
+6. After successful signup → Redirect to `/dashboard`
+7. Dashboard shows agent creation interface
+
+## SUCCESS CRITERIA
+
+✅ Visually stunning (judges say "wow")
+✅ Professional and polished
+✅ Smooth animations and interactions
+✅ Mobile responsive
+✅ Fast loading (< 2 seconds)
+✅ Authentication works flawlessly
+✅ Clear value proposition
+✅ Effective CTAs throughout
+
+## IMPORTANT NOTES
+
+- Focus on VISUAL APPEAL - this is a demo, it needs to impress
+- Use gradients, shadows, and animations generously (but tastefully)
+- Every section should have breathing room (generous padding)
+- Typography hierarchy must be clear
+- CTA buttons should be impossible to miss
+- The page should tell a story: Problem → Solution → Features → Proof → CTA
+
+Build this as a world-class SaaS landing page that makes judges want to sign up immediately!
+
+BEGIN!
+
+############################################### prompt 7 : Dashboard UI (Main Application #################################################################
+
+Dashboard UI (Main Application) for Lovable
+# PROJECT: Xebia Voice AI Studio - Dashboard UI
+
+## OVERVIEW
+Create the main application dashboard for "Xebia Voice AI Studio" where authenticated users create, manage, and monitor their AI voice agents.
+
+This is the PROTECTED APPLICATION that users access after logging in.
+
+## DESIGN INSPIRATION
+- Style: Modern SaaS dashboard (Vercel, Linear, Notion, Retool)
+- Vibe: Clean, productive, powerful yet simple
+- Color Scheme:
+  - Primary: Deep blue (#1e40af)
+  - Accent: Cyan (#06b6d4)
+  - Background: Light gray (#f8fafc)
+  - Cards: White with subtle shadows
+  - Sidebar: Dark navy (#0f172a)
+- Typography: Clean sans-serif (Inter)
+
+## LAYOUT STRUCTURE
+
+### Main Layout (Two-Panel)
+┌─────────────────────────────────────────────┐
+│  Sidebar (250px)   │   Main Content         │
+│                    │                        │
+│  - Logo            │   - Page Header        │
+│  - Navigation      │   - Content Area       │
+│  - User Profile    │                        │
+│                    │                        │
+└─────────────────────────────────────────────┘
+
+## SIDEBAR (LEFT PANEL - FIXED)
+
+**Content (Top to Bottom):**
+
+1. **Logo/Branding**
+   - "Xebia Voice AI" (with icon)
+   - Tagline: "Studio" (smaller, muted)
+
+2. **Navigation Menu:**
+   - 🏠 Dashboard (home icon)
+   - 🤖 My Agents (grid icon)
+   - ➕ Create Agent (plus circle icon)
+   - 📊 Analytics (bar chart icon)
+   - 📚 Knowledge Base (book icon)
+   - ⚙️ Settings (gear icon)
+
+3. **Bottom Section:**
+   - Usage Stats (small card):
+     - "3/10 Agents"
+     - "47/100 Queries"
+     - Progress bar
+   - User Profile:
+     - Avatar (circle)
+     - Name
+     - Email (truncated)
+     - Logout button
+
+**Styling:**
+- Dark background (#0f172a)
+- White/gray text
+- Active item: Accent background + white text
+- Hover: Lighter background
+- Icons: Left aligned with text
+- Smooth transitions
+
+## PAGE 1: DASHBOARD (HOME)
+
+### Page Header
+- Greeting: "Welcome back, [Username]!" (large, bold)
+- Subtitle: "Here's what's happening with your agents"
+- Action: "Create New Agent" button (top right, prominent)
+
+### Stats Overview (4 Cards in Row)
+1. **Total Agents**
+   - Number: "3" (large)
+   - Label: "Active Agents"
+   - Icon: Robot
+   - Trend: "+1 this week" (small, green)
+
+2. **Total Queries**
+   - Number: "1,247" (large)
+   - Label: "Questions Answered"
+   - Icon: MessageCircle
+   - Trend: "+156 today" (small, green)
+
+3. **Avg Response Time**
+   - Number: "2.4s" (large)
+   - Label: "Average Response"
+   - Icon: Zap
+   - Trend: "-0.3s improved" (small, green)
+
+4. **Success Rate**
+   - Number: "94%" (large)
+   - Label: "Query Success"
+   - Icon: CheckCircle
+   - Trend: "+2% this week" (small, green)
+
+**Styling:**
+- White cards with shadow
+- Icon in colored circle (different color per card)
+- Hover: Slight lift
+- Grid: 4 columns on desktop, 2 on tablet, 1 on mobile
+
+### Recent Activity Section
+- Heading: "Recent Activity"
+- Timeline/List of recent queries:
+  - Time: "2 minutes ago"
+  - User: "Anonymous User" (or employee name if tracked)
+  - Agent: "HR Assistant"
+  - Question: "What's the leave policy?"
+  - Status: "Answered" (green badge) or "Escalated" (yellow badge)
+- Show last 5-7 activities
+- "View All" link at bottom
+
+**Styling:**
+- White card container
+- List items with left border (colored by status)
+- Alternating subtle background
+- Icons for status
+
+### Quick Actions Section
+- Heading: "Quick Actions"
+- 3 cards:
+  1. **Create Agent** (Icon: Plus)
+     - "Start with a template"
+     - Arrow icon
+  2. **Upload Documents** (Icon: Upload)
+     - "Add to knowledge base"
+     - Arrow icon
+  3. **View Analytics** (Icon: BarChart)
+     - "Check performance"
+     - Arrow icon
+
+**Styling:**
+- 3-column grid
+- White cards with hover effect
+- Icon at top
+- Call-to-action appearance
+
+### Agent Overview Section
+- Heading: "Your Agents"
+- Grid of agent cards (shows all created agents):
+  
+  **Each Agent Card:**
+  - Agent icon/avatar (colored circle with initials or template icon)
+  - Agent name: "HR Assistant"
+  - Template: "General Xebia Assistant" (small, muted)
+  - Stats row:
+    - 📄 "12 docs"
+    - 💬 "234 queries"
+    - ⏱️ "Last used: 2h ago"
+  - Action buttons:
+    - "Test" (primary button)
+    - "Edit" (secondary button)
+    - "•••" (more options menu)
+
+**Styling:**
+- 3-column grid (2 on tablet, 1 on mobile)
+- White cards with border
+- Hover: Shadow increase + border color change
+- Empty state: Dashed border card with "Create your first agent" message
+
+## PAGE 2: MY AGENTS (LIST VIEW)
+
+### Page Header
+- Title: "My Agents" (large)
+- Subtitle: "Manage all your voice assistants"
+- Action: "Create New Agent" button
+
+### Filter/Search Bar
+- Search input: "Search agents..." (left)
+- Filter dropdown: "All Templates" | "General" | "Project" | "Tech" | "Client"
+- Sort dropdown: "Last used" | "Most queries" | "Alphabetical"
+
+### Agent Table (Desktop) / Cards (Mobile)
+
+**Table Columns:**
+1. Agent (name + icon)
+2. Template
+3. Documents (#)
+4. Queries (#)
+5. Last Used (timestamp)
+6. Status (Active/Inactive badge)
+7. Actions (Test | Edit | Delete)
+
+**Styling:**
+- White background
+- Alternating row colors
+- Hover: Highlight row
+- Sortable headers (with arrow icon)
+- Sticky header on scroll
+
+**Mobile Cards:**
+- Stack all info vertically
+- Actions in footer of card
+
+## PAGE 3: CREATE AGENT (WIZARD)
+
+### Progress Steps (Top)
+
+Choose Template  →  2. Configure  →  3. Upload Docs  →  4. Review
+[Active]              [Pending]         [Pending]        [Pending]
+
+
+### STEP 1: Choose Template
+
+**Template Library (Grid):**
+- 4 template cards (2x2 grid):
+
+  1. **General Xebia Assistant** (Icon: Info, Color: Blue)
+     - "Company policies and general info"
+     - "Best for: HR, Operations"
+  
+  2. **Project Onboarding** (Icon: Rocket, Color: Green)
+     - "Project context and setup"
+     - "Best for: New team members"
+  
+  3. **Tech Stack Guide** (Icon: Code, Color: Purple)
+     - "Technical documentation"
+     - "Best for: Developers"
+  
+  4. **Client Context** (Icon: Briefcase, Color: Orange)
+     - "Client background and history"
+     - "Best for: Account teams"
+
+**Card Styling:**
+- Large icon at top
+- Template name (bold)
+- Description (2 lines)
+- "Use Case" badge
+- "Select" button
+- Hover: Glow effect, scale up
+- Selected: Border + checkmark
+
+### STEP 2: Configure Agent
+
+**Form Fields:**
+
+1. **Agent Name** (Input)
+   - Label: "Agent Name"
+   - Placeholder: "e.g., HR Helper"
+   - Pre-filled from template
+
+2. **Description** (Textarea)
+   - Label: "Description"
+   - Placeholder: "What does this agent help with?"
+   - Pre-filled from template
+
+3. **System Prompt** (Textarea)
+   - Label: "System Prompt"
+   - Pre-filled with template default
+   - Expandable
+   - Help text: "This defines how the agent behaves"
+
+4. **Personality** (Radio buttons)
+   - Options: Professional | Friendly | Empathetic
+   - Icons with each option
+
+5. **Voice Settings** (Dropdown)
+   - Voice: "Rachel (Female, Professional)"
+   - Other options in dropdown
+
+**Styling:**
+- Clean form layout
+- Labels above inputs
+- Helpful placeholder text
+- Character count for textareas
+- "Next" button (bottom right)
+- "Back" button (bottom left)
+
+### STEP 3: Upload Documents
+
+**Upload Area:**
+- Large drag-and-drop zone:
+  - Icon: Upload cloud
+  - Text: "Drag and drop files here"
+  - "or click to browse"
+  - Supported: PDF, DOCX, TXT
+  - Max: 50 files
+
+**Uploaded Files List:**
+- Each file shows:
+  - File icon
+  - Filename
+  - Size
+  - Processing status:
+    - "Processing..." (spinner)
+    - "Ready" (green checkmark)
+    - "Error" (red X with message)
+  - Remove button (X)
+
+**Styling:**
+- Dashed border for drop zone
+- Hover: Background color change
+- File list: Table or card layout
+- Progress bars for processing
+
+### STEP 4: Review & Create
+
+**Summary Card:**
+- Agent icon (generated based on template)
+- Agent name
+- Template used
+- Description
+- Document count: "12 documents processed"
+- Total chunks: "234 chunks indexed"
+- Estimated ready time: "Ready to use now"
+
+**Actions:**
+- "Create Agent" (large, primary button)
+- "Back to Edit" (secondary button)
+
+**Styling:**
+- Centered summary card
+- Large, clear text
+- Confirmation feel
+- Success colors
+
+### Success Modal (After Creation)
+- Checkmark animation
+- "Agent Created Successfully!"
+- Quick actions:
+  - "Test Agent Now" (primary)
+  - "Create Another" (secondary)
+  - "Go to Dashboard" (tertiary)
+
+## PAGE 4: ANALYTICS
+
+### Page Header
+- Title: "Analytics"
+- Subtitle: "Track usage and performance"
+- Date range picker: "Last 7 days" dropdown
+
+### Overview Metrics (4 Cards - Same as Dashboard)
+- Total Queries
+- Avg Response Time
+- Success Rate
+- Active Users
+
+### Charts Section
+
+**Chart 1: Queries Over Time** (Line Chart)
+- X-axis: Dates
+- Y-axis: Number of queries
+- Line: Smooth curve
+- Tooltip on hover
+
+**Chart 2: Agent Usage** (Bar Chart)
+- X-axis: Agent names
+- Y-axis: Query count
+- Colored bars per agent
+
+**Chart 3: Most Asked Questions** (Table/List)
+- Question text
+- Count
+- Last asked
+- Success rate
+
+**Chart 4: Response Time Distribution** (Histogram)
+- X-axis: Time buckets (<1s, 1-2s, 2-3s, >3s)
+- Y-axis: Frequency
+
+**Styling:**
+- White card containers for each chart
+- Modern chart library (Recharts)
+- Responsive (stack on mobile)
+- Tooltips with detailed info
+
+### Export Section
+- "Export Report" button
+- Options: PDF | CSV | JSON
+
+## PAGE 5: KNOWLEDGE BASE
+
+### Page Header
+- Title: "Knowledge Base"
+- Subtitle: "All uploaded documents"
+- Search: "Search documents..."
+- Action: "Upload New" button
+
+### Document Library (Grid)
+
+**Each Document Card:**
+- File icon (PDF/DOCX)
+- Filename
+- Upload date
+- File size
+- Associated agents: Badge with agent names
+- Chunks: "45 chunks"
+- Actions dropdown:
+  - View
+  - Download
+  - Delete
+
+**Styling:**
+- Grid layout (3-4 columns)
+- White cards with border
+- Hover: Shadow
+- Empty state: "No documents yet"
+
+### Bulk Actions
+- Select multiple checkbox
+- Bulk delete
+- Bulk export
+
+## PAGE 6: SETTINGS
+
+### Tabs
+- General
+- Account
+- Billing (if applicable)
+- API Keys (future)
+
+### General Tab
+
+**Form Sections:**
+
+1. **Profile Settings**
+   - Avatar upload
+   - Display name
+   - Email (read-only)
+   - Job title
+
+2. **Preferences**
+   - Language: English
+   - Timezone: Auto-detect
+   - Notifications: Toggle switches
+
+3. **Danger Zone**
+   - Delete all agents (red button)
+   - Export data
+
+**Styling:**
+- Clean form layout
+- Section headings
+- Save button (bottom)
+- Unsaved changes warning
+
+## COMMON UI COMPONENTS
+
+### Buttons
+**Primary Button:**
+- Gradient background (blue to cyan)
+- White text
+- Rounded corners
+- Shadow on hover
+- Scale on click
+
+**Secondary Button:**
+- Border + transparent background
+- Primary color text
+- Hover: Fill background
+
+**Danger Button:**
+- Red background
+- White text
+- Used for delete actions
+
+### Modals
+**Structure:**
+- Overlay (dark, semi-transparent)
+- Card (white, centered)
+- Header with close X
+- Content area
+- Footer with actions
+
+**Types:**
+- Confirmation modals
+- Form modals
+- Success/Error messages
+
+### Empty States
+- Icon (large, muted)
+- Heading: "No agents yet"
+- Description: "Create your first agent to get started"
+- CTA button: "Create Agent"
+
+### Loading States
+- Skeleton loaders for cards
+- Spinner for buttons
+- Progress bars for uploads
+
+### Toasts/Notifications
+- Position: Top right
+- Types: Success (green) | Error (red) | Info (blue)
+- Auto-dismiss after 3 seconds
+- Can be manually dismissed
+
+## RESPONSIVE DESIGN
+
+**Mobile (<768px):**
+- Sidebar: Collapsible hamburger menu
+- Stats: Single column
+- Tables: Convert to cards
+- Charts: Full width, scrollable
+- Forms: Full width inputs
+
+**Tablet (768-1024px):**
+- Sidebar: Can toggle collapse
+- Stats: 2 columns
+- Agent grid: 2 columns
+- Most layouts adapt
+
+**Desktop (>1024px):**
+- Full sidebar visible
+- Multi-column layouts
+- Hover effects active
+- Optimal spacing
+
+## NAVIGATION & ROUTING
+
+**Routes:**
+- `/dashboard` - Dashboard home
+- `/dashboard/agents` - My Agents list
+- `/dashboard/agents/create` - Create wizard
+- `/dashboard/agents/:id/edit` - Edit agent
+- `/dashboard/analytics` - Analytics
+- `/dashboard/knowledge` - Knowledge base
+- `/dashboard/settings` - Settings
+
+**Protected Routes:**
+- All dashboard routes require authentication
+- Redirect to `/login` if not authenticated
+- Use Supabase auth state
+
+## AUTHENTICATION INTEGRATION
+
+**Supabase Auth:**
+- Check auth state on load
+- Store user info in context
+- Logout function
+- Session persistence
+
+**User Profile:**
+- Fetch from Supabase
+- Display in sidebar
+- Update in settings
+
+## STATE MANAGEMENT
+
+**Global State (Context or Zustand):**
+- User auth state
+- Agent list
+- Current agent being edited
+- Upload progress
+- Toast notifications
+
+**Local State:**
+- Form inputs
+- Filter/search values
+- Modal open/closed
+
+## DATA FLOW (MOCK FOR NOW)
+
+**Note:** Lovable will create the UI. Cursor will handle backend.
+
+**For Demo Purposes in Lovable:**
+- Use mock data for agents, stats, activities
+- Simulate upload with setTimeout
+- Fake analytics data
+- Store in localStorage temporarily
+
+**Example Mock Data:**
+```javascript
+const mockAgents = [
+  {
+    id: '1',
+    name: 'HR Assistant',
+    template: 'general',
+    documentCount: 12,
+    queryCount: 234,
+    lastUsed: '2 hours ago',
+    status: 'active'
+  },
+  // ... more agents
+];
+```
+
+## TECHNICAL REQUIREMENTS
+
+**Tech Stack:**
+- React with TypeScript
+- Tailwind CSS
+- Shadcn/ui components
+- React Router for navigation
+- Recharts for analytics
+- Framer Motion for animations
+- Supabase for auth
+- React Hook Form for forms
+- Zustand or Context for state
+
+**Key Libraries:**
+- `lucide-react` - Icons
+- `date-fns` - Date formatting
+- `react-dropzone` - File uploads
+- `sonner` - Toast notifications
+
+## DESIGN SYSTEM
+
+**Spacing Scale:**
+xs: 0.25rem (4px)
+sm: 0.5rem (8px)
+md: 1rem (16px)
+lg: 1.5rem (24px)
+xl: 2rem (32px)
+2xl: 3rem (48px)
+
+**Border Radius:**
+sm: 0.25rem
+md: 0.5rem
+lg: 1rem
+full: 9999px (circles)
+
+**Shadows:**
+sm: 0 1px 2px rgba(0,0,0,0.05)
+md: 0 4px 6px rgba(0,0,0,0.1)
+lg: 0 10px 15px rgba(0,0,0,0.1)
+xl: 0 20px 25px rgba(0,0,0,0.1)
+
+## ACCESSIBILITY
+
+- Semantic HTML
+- ARIA labels
+- Keyboard navigation
+- Focus indicators
+- Color contrast (WCAG AA)
+- Screen reader friendly
+
+## SUCCESS CRITERIA
+
+✅ Clean, modern UI that looks professional
+✅ Intuitive navigation
+✅ Smooth animations and transitions
+✅ Fully responsive
+✅ All CRUD operations have UI
+✅ Loading and empty states
+✅ Error handling UI
+✅ Consistent design language
+
+Build a dashboard that feels like a polished SaaS product ready for production!
+
+BEGIN!
+
+########################### prompt 8 Backend #########################################################################################
+
+
+Xebia Voice AI Studio Platform
+# PROJECT: Xebia Voice AI Studio Platform
+
+## CONTEXT & BACKGROUND
+
+I'm building an internal voice AI platform for Xebia (IT consulting company) as part of a 30-hour hackathon. This is a solo project focused on solving a real problem: Xebia employees (1000+) struggle with information overload - long documents, scattered knowledge across Confluence/Slack, and slow onboarding for new joiners.
+
+The solution: A platform where Xebia managers/leads can create specialized voice AI agents for their teams. Each agent can answer questions conversationally by querying uploaded documents using RAG.
+
+## WHAT WE'RE BUILDING
+
+A web-based platform with these core capabilities:
+
+1. **Agent Template Library**: Pre-built templates for common use cases (General Xebia Assistant, Project Onboarding Agent, Tech Stack Guide, Client Context Agent)
+
+2. **Agent Creation & Configuration**: 
+   - Create new agents from templates
+   - Upload documents (PDFs, DOCX, TXT)
+   - Configure agent personality and name
+   - Test agent immediately in browser
+
+3. **Session-Based RAG Pipeline**:
+   - Documents uploaded → auto-chunked & vectorized
+   - User queries agent via voice or text
+   - Agent retrieves relevant context and responds
+   - After session ends → cleanup vectors (privacy-preserving)
+
+4. **Testing Interface**:
+   - Browser-based voice input (speak questions)
+   - Voice output (agent speaks answers)
+   - Real-time transcript display
+   - Source citation showing which document answered the question
+
+5. **Analytics Dashboard**:
+   - List of all created agents
+   - Usage metrics (total queries, documents indexed)
+   - Simple stats (most asked questions, response accuracy)
+
+## CRITICAL CONSTRAINTS
+
+**Must Have:**
+- ✅ Working browser-based voice interface (microphone input, audio output)
+- ✅ RAG pipeline that actually works (accurate answers from uploaded docs)
+- ✅ Beautiful, modern UI (this will be demoed live)
+- ✅ Session cleanup (delete vectors after session ends)
+- ✅ At least 3-4 working agent templates
+- ✅ Real-time response streaming
+
+**Nice to Have (but can skip if time-constrained):**
+- Advanced analytics with charts
+- User authentication
+- Agent sharing between users
+- Conversation history
+
+**Explicitly NOT Building:**
+- ❌ Phone call integration (Twilio/LiveKit)
+- ❌ WhatsApp/SMS integration
+- ❌ MCP servers
+- ❌ Multi-user concurrent sessions (only 1 agent runs at a time for demo)
+- ❌ Production-grade security/auth
+
+## TECH STACK REQUIREMENTS
+
+**Frontend:**
+- Next.js 14 (App Router) with TypeScript
+- Tailwind CSS + shadcn/ui components
+- React Hooks for state management
+- WebSocket or Server-Sent Events for real-time updates
+- Web Speech API for voice input OR Deepgram SDK
+- Audio playback for voice responses
+
+**Backend:**
+- Python with FastAPI
+- LangChain or LlamaIndex for RAG pipeline
+- ChromaDB for vector storage (local, file-based)
+- OpenAI/Anthropic for embeddings and LLM responses
+- ElevenLabs for text-to-speech OR use native audio from Gemini 2.0
+- Deepgram for speech-to-text (optional, can use Web Speech API)
+
+**Database:**
+- SQLite or PostgreSQL for agent configs and metadata
+- ChromaDB collections (one per session, deleted after)
+
+**Deployment:**
+- Frontend: Vercel
+- Backend: Railway or Render
+- Keep it simple - must deploy and demo reliably
+
+## ARCHITECTURE OVERVIEW
+┌─────────────────────────────────────────┐
+│         Next.js Frontend                │
+│                                         │
+│  ├─ Agent Template Library (grid view) │
+│  ├─ Agent Builder (create/config)      │
+│  ├─ Document Upload Interface          │
+│  ├─ Voice Testing UI                   │
+│  └─ Analytics Dashboard                │
+└─────────────────────────────────────────┘
+↕ REST API
+┌─────────────────────────────────────────┐
+│        FastAPI Backend                  │
+│                                         │
+│  ├─ /agents (CRUD operations)          │
+│  ├─ /upload (document processing)      │
+│  ├─ /query (RAG pipeline)              │
+│  ├─ /tts (text-to-speech)              │
+│  └─ /session (lifecycle management)    │
+└─────────────────────────────────────────┘
+↕
+┌─────────────────────────────────────────┐
+│      RAG Pipeline Components            │
+│                                         │
+│  ├─ Document Loader (PDF, DOCX, TXT)   │
+│  ├─ Text Chunker (smart splitting)     │
+│  ├─ Embedding Generator (OpenAI)       │
+│  ├─ Vector Store (ChromaDB)            │
+│  ├─ Retriever (similarity search)      │
+│  ├─ LLM Chain (Claude/Gemini)          │
+│  └─ Response Synthesizer              │
+└─────────────────────────────────────────┘
+↕
+┌─────────────────────────────────────────┐
+│         Data Layer                      │
+│                                         │
+│  ├─ SQLite (agent metadata)            │
+│  └─ ChromaDB (vector embeddings)       │
+└─────────────────────────────────────────┘
+
+## AGENT TEMPLATES (PRE-CONFIGURED)
+
+Create these 4 templates with pre-defined system prompts:
+
+1. **General Xebia Assistant**
+   - Name: "Xebia Knowledge Helper"
+   - Description: "Answers questions about Xebia policies, benefits, org structure, and general company information"
+   - System Prompt: "You are a helpful Xebia employee assistant. Answer questions about company policies, organizational structure, employee benefits, and general information. Be professional yet friendly. If you don't know something, say so clearly."
+   - Icon/Color: Blue
+
+2. **Project Onboarding Agent**
+   - Name: "Project Onboarder"
+   - Description: "Helps new team members understand project context, setup, and workflows"
+   - System Prompt: "You are a project onboarding assistant. Help new team members understand the project background, technical setup, development workflows, and team structure. Provide step-by-step guidance when needed."
+   - Icon/Color: Green
+
+3. **Tech Stack Guide**
+   - Name: "Tech Stack Expert"
+   - Description: "Expert on tools, frameworks, and technical best practices"
+   - System Prompt: "You are a technical expert assistant. Help developers understand the tech stack, frameworks, libraries, development tools, and coding best practices. Provide code examples when helpful."
+   - Icon/Color: Purple
+
+4. **Client Context Agent**
+   - Name: "Client Intelligence"
+   - Description: "Provides context about clients, their domain, and engagement history"
+   - System Prompt: "You are a client context specialist. Answer questions about client background, industry domain, previous engagements, stakeholders, and business requirements. Be factual and professional."
+   - Icon/Color: Orange
+
+## USER FLOW (HOW IT SHOULD WORK)
+
+### Flow 1: Creating an Agent
+1. User lands on dashboard
+2. Clicks "Create New Agent"
+3. Sees template library (grid of 4 templates)
+4. Selects "Project Onboarding Agent"
+5. Modal opens with:
+   - Agent name field (pre-filled, editable)
+   - Description (pre-filled, editable)
+   - Document upload area (drag-and-drop)
+6. User uploads 3 PDF files about the project
+7. Backend processes documents:
+   - Extracts text from PDFs
+   - Chunks into smaller segments
+   - Generates embeddings
+   - Stores in ChromaDB collection
+8. Progress indicator shows: "Processing documents... 1/3 done"
+9. When complete: "Agent ready! Click 'Test Agent' to try it"
+10. Agent appears in dashboard list
+
+### Flow 2: Testing an Agent
+1. User clicks "Test Agent" on a created agent
+2. New page/modal opens with chat interface
+3. Interface shows:
+   - Agent name and description at top
+   - Transcript area (scrollable)
+   - Microphone button (for voice input)
+   - Text input field (alternative to voice)
+   - "End Session" button
+4. User clicks microphone button
+5. Browser asks for mic permission (if first time)
+6. User speaks: "What is the tech stack for this project?"
+7. Voice visualizer shows audio being captured
+8. Speech-to-text converts audio → text
+9. Text appears in transcript as "User: What is the tech stack for this project?"
+10. Backend RAG pipeline:
+    - Generates embedding for question
+    - Searches ChromaDB for similar chunks
+    - Retrieves top 3-5 relevant chunks
+    - Sends to Claude/Gemini with context
+    - Gets response
+11. Response streams back to frontend
+12. Text-to-speech converts response → audio
+13. Audio plays through browser
+14. Transcript shows: "Agent: Based on the project documentation, the tech stack includes React, Node.js, and PostgreSQL..."
+15. Small badge shows source: "Source: project_setup.pdf, page 3"
+16. User can ask follow-up questions
+17. When done, clicks "End Session"
+18. Backend deletes ChromaDB collection for this session
+
+### Flow 3: Analytics Dashboard
+1. User clicks "Dashboard" in navigation
+2. Sees cards with metrics:
+   - Total Agents Created: 5
+   - Total Queries Answered: 127
+   - Total Documents Indexed: 23
+3. Table below shows all agents:
+   - Agent name
+   - Template used
+   - Documents count
+   - Queries answered
+   - Last used timestamp
+   - Actions (Test, Edit, Delete)
+
+## UI/UX REQUIREMENTS
+
+**Design Principles:**
+- Modern, clean, minimal
+- Inspired by: Vercel dashboard, Linear, Notion
+- Color scheme: Professional but not boring (use Tailwind colors)
+- Animations: Smooth transitions, not distracting
+- Mobile-friendly (responsive)
+
+**Key Pages/Components:**
+
+1. **Dashboard (Home)**
+   - Header with logo "Xebia Voice AI Studio"
+   - Stats cards (agents created, queries answered, docs indexed)
+   - Agent list table
+   - "Create New Agent" button (prominent, top-right)
+
+2. **Template Library Modal**
+   - Grid layout (2x2)
+   - Each template card shows:
+     - Icon
+     - Template name
+     - Description
+     - "Use Template" button
+   - Hover effect on cards
+
+3. **Agent Configuration Modal**
+   - Tabs or sections:
+     - Basic Info (name, description)
+     - Documents (upload area)
+     - System Prompt (textarea, pre-filled but editable)
+   - File upload area:
+     - Drag-and-drop zone
+     - Shows uploaded files with size
+     - Remove file option
+   - "Create Agent" button (disabled until at least 1 doc uploaded)
+
+4. **Testing Interface**
+   - Split layout:
+     - Left: Agent info card
+     - Right: Chat interface
+   - Chat interface:
+     - Transcript area (auto-scroll)
+     - Message bubbles (user vs agent)
+     - Source citations as small badges
+     - Input area at bottom:
+       - Text input field
+       - Microphone button (with visual feedback when recording)
+       - Send button
+   - Audio visualizer when agent is speaking
+
+5. **Analytics Dashboard**
+   - Simple cards with numbers
+   - Table of agents (sortable)
+   - No complex charts needed (can add if time permits)
+
+## TECHNICAL IMPLEMENTATION DETAILS
+
+### Document Processing Pipeline
+```python
+# Pseudo-code for backend RAG pipeline
+
+async def upload_documents(agent_id: str, files: List[UploadFile]):
+    # 1. Create ChromaDB collection for this agent
+    collection = chromadb.create_collection(f"agent_{agent_id}")
+    
+    # 2. Process each file
+    all_chunks = []
+    for file in files:
+        # Extract text based on file type
+        if file.filename.endswith('.pdf'):
+            text = extract_pdf_text(file)
+        elif file.filename.endswith('.docx'):
+            text = extract_docx_text(file)
+        else:
+            text = file.read().decode('utf-8')
+        
+        # 3. Chunk the text intelligently
+        chunks = text_splitter.split_text(text)
+        # Add metadata to each chunk
+        for i, chunk in enumerate(chunks):
+            all_chunks.append({
+                'text': chunk,
+                'source': file.filename,
+                'chunk_id': i
+            })
+    
+    # 4. Generate embeddings
+    texts = [chunk['text'] for chunk in all_chunks]
+    embeddings = openai.embeddings.create(input=texts)
+    
+    # 5. Store in ChromaDB
+    collection.add(
+        embeddings=embeddings,
+        documents=texts,
+        metadatas=[{
+            'source': c['source'],
+            'chunk_id': c['chunk_id']
+        } for c in all_chunks]
+    )
+    
+    return {"status": "success", "chunks_processed": len(all_chunks)}
+```
+
+### Query Pipeline
+```python
+async def query_agent(agent_id: str, question: str):
+    # 1. Get agent config and collection
+    agent = db.get_agent(agent_id)
+    collection = chromadb.get_collection(f"agent_{agent_id}")
+    
+    # 2. Generate embedding for question
+    question_embedding = openai.embeddings.create(input=[question])
+    
+    # 3. Search ChromaDB for relevant chunks
+    results = collection.query(
+        query_embeddings=[question_embedding],
+        n_results=5
+    )
+    
+    # 4. Build context from retrieved chunks
+    context = "\n\n".join(results['documents'][0])
+    sources = results['metadatas'][0]
+    
+    # 5. Send to LLM with context
+    prompt = f"""
+    You are {agent.name}. {agent.system_prompt}
+    
+    Context from documents:
+    {context}
+    
+    User question: {question}
+    
+    Answer the question based on the provided context. If the context doesn't contain relevant information, say so clearly.
+    """
+    
+    response = anthropic.messages.create(
+        model="claude-sonnet-4-20250514",
+        messages=[{"role": "user", "content": prompt}]
+    )
+    
+    # 6. Return response with sources
+    return {
+        "answer": response.content[0].text,
+        "sources": [s['source'] for s in sources]
+    }
+```
+
+### Voice Interface (Frontend)
+```typescript
+// Pseudo-code for voice input/output
+
+// Voice Input using Web Speech API
+const startVoiceInput = () => {
+  const recognition = new webkitSpeechRecognition();
+  recognition.continuous = false;
+  recognition.interimResults = false;
+  
+  recognition.onresult = (event) => {
+    const transcript = event.results[0][0].transcript;
+    // Send transcript to backend
+    queryAgent(transcript);
+  };
+  
+  recognition.start();
+};
+
+// Voice Output using ElevenLabs or browser TTS
+const speakResponse = async (text: string) => {
+  // Option 1: ElevenLabs API
+  const audio = await fetch('/api/tts', {
+    method: 'POST',
+    body: JSON.stringify({ text })
+  });
+  const audioBlob = await audio.blob();
+  const audioUrl = URL.createObjectURL(audioBlob);
+  const audioElement = new Audio(audioUrl);
+  audioElement.play();
+  
+  // Option 2: Browser TTS (fallback)
+  // const utterance = new SpeechSynthesisUtterance(text);
+  // speechSynthesis.speak(utterance);
+};
+```
+
+## SESSION CLEANUP MECHANISM
+```python
+# When user clicks "End Session"
+async def end_session(agent_id: str, session_id: str):
+    # 1. Delete ChromaDB collection for this session
+    collection_name = f"agent_{agent_id}_session_{session_id}"
+    chromadb.delete_collection(collection_name)
+    
+    # 2. Clear temporary files
+    clear_temp_files(session_id)
+    
+    # 3. Log session end in database
+    db.sessions.update(session_id, {
+        'ended_at': datetime.now(),
+        'status': 'completed'
+    })
+    
+    return {"status": "session_ended"}
+```
+
+## API ENDPOINTS NEEDED
+
+**Agent Management:**
+- `POST /api/agents/create` - Create new agent from template
+- `GET /api/agents/list` - List all agents
+- `GET /api/agents/{id}` - Get agent details
+- `PUT /api/agents/{id}` - Update agent config
+- `DELETE /api/agents/{id}` - Delete agent
+
+**Document Management:**
+- `POST /api/agents/{id}/upload` - Upload documents to agent
+- `GET /api/agents/{id}/documents` - List agent's documents
+- `DELETE /api/agents/{id}/documents/{doc_id}` - Remove document
+
+**Query & Conversation:**
+- `POST /api/agents/{id}/query` - Send text query to agent
+- `POST /api/agents/{id}/start-session` - Start new chat session
+- `POST /api/agents/{id}/end-session` - End session and cleanup
+
+**Voice:**
+- `POST /api/tts` - Convert text to speech (returns audio file)
+- `POST /api/stt` - Convert speech to text (if not using Web Speech API)
+
+**Analytics:**
+- `GET /api/analytics/overview` - Get overall stats
+- `GET /api/agents/{id}/analytics` - Get agent-specific stats
+
+## DATABASE SCHEMA
+```sql
+-- Agents table
+CREATE TABLE agents (
+    id UUID PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    description TEXT,
+    template_id VARCHAR(50), -- 'general', 'project', 'techstack', 'client'
+    system_prompt TEXT,
+    created_at TIMESTAMP DEFAULT NOW(),
+    updated_at TIMESTAMP DEFAULT NOW(),
+    query_count INTEGER DEFAULT 0,
+    document_count INTEGER DEFAULT 0
+);
+
+-- Documents table
+CREATE TABLE documents (
+    id UUID PRIMARY KEY,
+    agent_id UUID REFERENCES agents(id) ON DELETE CASCADE,
+    filename VARCHAR(255),
+    file_size INTEGER,
+    chunk_count INTEGER,
+    uploaded_at TIMESTAMP DEFAULT NOW()
+);
+
+-- Sessions table (optional, for tracking)
+CREATE TABLE sessions (
+    id UUID PRIMARY KEY,
+    agent_id UUID REFERENCES agents(id),
+    started_at TIMESTAMP DEFAULT NOW(),
+    ended_at TIMESTAMP,
+    query_count INTEGER DEFAULT 0,
+    status VARCHAR(50) DEFAULT 'active'
+);
+
+-- Queries table (for analytics)
+CREATE TABLE queries (
+    id UUID PRIMARY KEY,
+    agent_id UUID REFERENCES agents(id),
+    session_id UUID REFERENCES sessions(id),
+    question TEXT,
+    answer TEXT,
+    sources JSONB,
+    timestamp TIMESTAMP DEFAULT NOW()
+);
+```
+
+## DEVELOPMENT APPROACH
+
+**Phase 1: Backend RAG Pipeline (Critical)**
+- Set up FastAPI project structure
+- Implement document upload and processing
+- Build RAG pipeline with ChromaDB
+- Test with sample PDFs
+- Ensure accurate responses
+
+**Phase 2: Frontend Core (Critical)**
+- Set up Next.js project with TypeScript
+- Build agent template library UI
+- Create agent configuration flow
+- Implement document upload interface
+- Test end-to-end agent creation
+
+**Phase 3: Voice Interface (Critical)**
+- Implement Web Speech API for voice input
+- Add text-to-speech (ElevenLabs or browser TTS)
+- Build chat/testing interface
+- Add visual feedback (voice visualizer, recording indicator)
+- Test voice interaction flow
+
+**Phase 4: Analytics & Polish (Important)**
+- Build analytics dashboard
+- Add usage tracking
+- Implement session cleanup
+- UI polish and animations
+- Error handling
+
+**Phase 5: Deployment & Testing (Critical)**
+- Deploy backend to Railway/Render
+- Deploy frontend to Vercel
+- End-to-end testing with real documents
+- Performance optimization
+- Demo rehearsal
+
+## SUCCESS CRITERIA
+
+**Must Work:**
+1. ✅ Create agent from template
+2. ✅ Upload at least 3 PDFs
+3. ✅ Ask question via voice → get accurate answer
+4. ✅ Hear response via audio output
+5. ✅ See source citations
+6. ✅ Session cleanup works
+7. ✅ Beautiful, responsive UI
+8. ✅ Deploy and access via public URL
+
+**Demo Readiness:**
+- Can create agent in under 1 minute
+- Voice input/output works reliably
+- RAG gives accurate answers (test with 20+ questions)
+- UI is polished and professional
+- No crashes or errors during 5-minute demo
+
+## CONSTRAINTS & LIMITATIONS
+
+**Time:** 30 hours total development time
+**Scope:** Single developer, must finish everything
+**Demo:** Will be presented live to judges
+**Users:** No authentication needed (demo purposes)
+**Concurrency:** Only 1 agent session runs at a time
+**Data:** Use sample Xebia documents (can be mock/generic)
+
+## WHAT SUCCESS LOOKS LIKE
+
+A working platform where:
+1. I can create 4 different types of agents
+2. Upload real PDF documents to each agent
+3. Ask questions via voice and get accurate spoken responses
+4. See which document the answer came from
+5. View simple analytics of usage
+6. The entire experience feels polished and production-ready
+
+The demo should feel like a real internal product that Xebia could deploy tomorrow for 1000 employees.
+
+## CRITICAL NOTES
+
+- **NEVER use localStorage/sessionStorage** in frontend (not supported in claude.ai artifacts, but this is a standalone app so it's fine)
+- **Keep it simple** - don't over-engineer
+- **Working demo > perfect code** - prioritize functionality
+- **Test frequently** - ensure RAG actually works with real documents
+- **Error handling** - gracefully handle failures (no crashes)
+- **Visual polish matters** - this will be judged on appearance too
+
+## YOUR TASK
+
+Based on this comprehensive brief:
+1. Create a detailed implementation plan with specific tasks
+2. Start building the backend RAG pipeline first (most critical)
+3. Then build the frontend interface
+4. Integrate voice capabilities
+5. Add analytics and polish
+6. Guide me through testing and deployment
+
+Ask clarifying questions if anything is unclear. Let's build this step by step, ensuring each component works before moving to the next.
+
+BEGIN!
+
+
+#################################### cursor prompts nowonwards ############################################################################################
+
+Okay, thanks.
+
+Now we need to use Cursor for the entire development, and all development must be done using vibe coding only.
+
+In the Cursor AI assistant, I have already attached the problem statement you shared earlier as context.
+Now I need a single, detailed prompt so that Cursor can:
+
+Fully understand what we want to build
+
+Create a detailed execution plan
+
+Start implementing the solution step by step
+
+The prompt should clearly capture:
+
+The full context
+
+The scope and constraints
+
+The architecture direction
+
+What is in our mind conceptually
+
+Please help me write this comprehensive prompt that I can directly give to Cursor.
+
+Cursor Prompt (Copy–Paste This)
+You are an expert GenAI architect and full-stack engineer.
+
+Context:
+We are building a hackathon solution called **Xebia Voice Companion**. This is a production-grade, internal voice AI agent for Xebia employees, built during a 30-hour hackathon using vibe coding only. The goal is to demonstrate what can realistically be built in a short time while still looking enterprise-ready.
+
+Problem:
+Xebia employees—especially new joiners or engineers joining new projects—struggle to quickly understand project context, client details, internal processes, tools, and documentation. People do not want to read long documents; they prefer conversational access to knowledge.
+
+Solution Overview:
+Build a **voice-first AI companion** that allows employees to talk and ask questions naturally. The agent should answer questions using project-specific and domain-specific internal knowledge and tools.
+
+Key Constraints:
+- No production deployment required
+- Everything runs locally
+- Only one voice agent runs at a time
+- Scope must be realistic for ~30 hours
+- Security: no real secrets or personal data
+- All development must be done via vibe coding in Cursor
+
+Core Design Direction:
+- A **single Xebia Voice Companion** (not multiple products)
+- Internally designed to support **multiple projects/domains**
+- Architected as a **multi-agent system**:
+  - A **Supervisor/Router Agent** interacts with the user first
+  - It gathers context (project name, domain, role)
+  - Routes the request to a **domain- or project-specific sub-agent**
+- Each sub-agent has:
+  - Its own prompt
+  - Access to project/domain-specific tools
+  - A dedicated knowledge source (mocked data is fine)
+
+Voice & Runtime:
+- Voice interaction using LiveKit
+- “Deploy” and “Test” both mean running the agent runtime
+- Single runtime is acceptable with dynamic config loading
+
+Tools & Integrations:
+- Pre-built internal tools (mock data):
+  - Project info lookup
+  - Client/process FAQ
+  - Onboarding checklist
+- Support **custom tool creation**:
+  - Generic API tool where users can configure endpoint + params
+- Optional: demonstrate **one MCP integration** (e.g., Google Calendar)
+- Other integrations can be UI mockups marked “Coming Soon”
+
+Templates:
+- Support agent templates:
+  - Template name
+  - Prompt
+  - Voice
+  - Tools
+- Selecting a template auto-populates fields, which the user can edit
+
+What You Need To Do:
+1. Create a **clear, step-by-step development plan**
+2. Propose a **clean architecture** (agents, tools, data flow)
+3. Break work into **phases** suitable for a hackathon
+4. Start implementing:
+   - Backend first (agent runtime, tools, routing)
+   - Then voice integration
+   - Then minimal but solid UI
+5. Keep the solution **production-quality in design**, even if mocked in data
+6. Prioritize demo reliability and clarity over feature breadth
+
+Think like:
+- A jury member evaluating feasibility
+- A GenAI architect designing agentic systems
+- A startup engineer building fast but clean
+
+First output:
+- A detailed plan + architecture
+Then:
+- Start implementing step by step
+
+
+################################################################################################################################################
+
+Okay, thanks.
+
+Now we need to use Cursor for the entire development, and all development must be done using vibe coding only.
+
+In the Cursor AI assistant, I have already attached the problem statement you shared earlier as context.
+Now I need a single, detailed prompt so that Cursor can:
+
+Fully understand what we want to build
+
+Create a detailed execution plan
+
+Start implementing the solution step by step
+
+The prompt should clearly capture:
+
+The full context
+
+The scope and constraints
+
+The architecture direction
+
+What is in our mind conceptually
+
+Please help me write this comprehensive prompt that I can directly give to Cursor.
+
+Cursor Prompt (Copy–Paste This)
+You are an expert GenAI architect and full-stack engineer.
+
+Context:
+We are building a hackathon solution called **Xebia Voice Companion**. This is a production-grade, internal voice AI agent for Xebia employees, built during a 30-hour hackathon using vibe coding only. The goal is to demonstrate what can realistically be built in a short time while still looking enterprise-ready.
+
+Problem:
+Xebia employees—especially new joiners or engineers joining new projects—struggle to quickly understand project context, client details, internal processes, tools, and documentation. People do not want to read long documents; they prefer conversational access to knowledge.
+
+Solution Overview:
+Build a **voice-first AI companion** that allows employees to talk and ask questions naturally. The agent should answer questions using project-specific and domain-specific internal knowledge and tools.
+
+Key Constraints:
+- No production deployment required
+- Everything runs locally
+- Only one voice agent runs at a time
+- Scope must be realistic for ~30 hours
+- Security: no real secrets or personal data
+- All development must be done via vibe coding in Cursor
+
+Core Design Direction:
+- A **single Xebia Voice Companion** (not multiple products)
+- Internally designed to support **multiple projects/domains**
+- Architected as a **multi-agent system**:
+  - A **Supervisor/Router Agent** interacts with the user first
+  - It gathers context (project name, domain, role)
+  - Routes the request to a **domain- or project-specific sub-agent**
+- Each sub-agent has:
+  - Its own prompt
+  - Access to project/domain-specific tools
+  - A dedicated knowledge source (mocked data is fine)
+
+Voice & Runtime:
+- Voice interaction using LiveKit
+- “Deploy” and “Test” both mean running the agent runtime
+- Single runtime is acceptable with dynamic config loading
+
+Tools & Integrations:
+- Pre-built internal tools (mock data):
+  - Project info lookup
+  - Client/process FAQ
+  - Onboarding checklist
+- Support **custom tool creation**:
+  - Generic API tool where users can configure endpoint + params
+- Optional: demonstrate **one MCP integration** (e.g., Google Calendar)
+- Other integrations can be UI mockups marked “Coming Soon”
+
+Templates:
+- Support agent templates:
+  - Template name
+  - Prompt
+  - Voice
+  - Tools
+- Selecting a template auto-populates fields, which the user can edit
+
+What You Need To Do:
+1. Create a **clear, step-by-step development plan**
+2. Propose a **clean architecture** (agents, tools, data flow)
+3. Break work into **phases** suitable for a hackathon
+4. Start implementing:
+   - Backend first (agent runtime, tools, routing)
+   - Then voice integration
+   - Then minimal but solid UI
+5. Keep the solution **production-quality in design**, even if mocked in data
+6. Prioritize demo reliability and clarity over feature breadth
+
+Think like:
+- A jury member evaluating feasibility
+- A GenAI architect designing agentic systems
+- A startup engineer building fast but clean
+
+First output:
+- A detailed plan + architecture
+Then:
+- Start implementing step by step
+
+
+################################################################################################################################################
+
+Thanks.
+
+Now we will build the beautiful, production-ready UI using Lovable, and handle the backend and integrations using Cursor.
+
+So, I need your help creating a detailed prompt for generating the UI. Please make sure the UI looks modern, polished, and enterprise-grade.
+
+Once Lovable generates the UI code, we will move that code into Cursor to build:
+
+Backend services
+
+Agent logic
+
+Integrations
+
+Authentication
+
+We also need authentication, and for that we want to use Supabase (email/password is sufficient).
+
+Website + Dashboard
+
+We also need an informational website for this voice bot:
+
+It should explain what the Xebia Voice Companion is
+
+It should have CTA buttons like Login, Sign Up, or Get Started
+
+Clicking these should redirect users to the dashboard
+
+Voice Interaction UI
+
+Additionally, we want a separate UI for the web-based voice interaction where users can:
+
+Talk to the voice agent
+
+See conversation state / transcript
+
+Start / stop the agent
+
+So please give me:
+
+One prompt for the main website + dashboard UI
+
+One separate prompt for the voice interaction interface
+
+Design Requirements
+
+The UI must use Xebia’s theme, details shared below.
+
+Prompt 1: Lovable UI Prompt — Website + Dashboard
+You are a senior product designer and frontend engineer.
+
+Build a production-ready, beautiful UI for a product called **Xebia Voice Companion** — an internal, enterprise-grade voice AI assistant for Xebia employees.
+
+High-level pages to build:
+
+1. Marketing / Informational Website
+   - Hero section with product value proposition
+   - Short explanation of what the Voice Companion does
+   - Key benefits (faster onboarding, conversational access to knowledge, voice-first AI)
+   - CTA buttons: “Login”, “Sign Up”, “Get Started”
+   - Footer with Xebia branding
+
+2. Authentication
+   - Login page
+   - Sign-up page
+   - Use **Supabase authentication** (email + password)
+   - Clean, minimal, enterprise look
+
+3. Dashboard (post-login)
+   - Welcome header with user name
+   - Overview cards:
+     - Active Voice Agents
+     - Available Templates
+     - Recent Conversations
+   - Navigation sidebar:
+     - Dashboard
+     - Agents
+     - Templates
+     - Tools
+     - Settings
+   - Agent Management UI:
+     - Create new agent
+     - Edit agent configuration:
+       - Name
+       - Prompt
+       - Voice
+       - Model
+       - Tools
+     - “Test Agent” / “Deploy Agent” button (same action visually)
+
+Design & UX Requirements:
+- Look **enterprise-grade**, polished, and production-ready
+- Use **glassmorphism** (blur, translucency) where appropriate
+- Subtle animations and hover states
+- Responsive layout
+- Clear visual hierarchy
+
+Branding & Theme (Must Follow Exactly):
+Typography:
+- Primary font: **Poppins**
+- Base font size: 13px
+- Font weights: 300, 400, 500, 700
+- Code font: source-code-pro / Menlo / Monaco
+
+Primary Colors:
+- Theme Primary: rgb(74 30 71 / 90%)
+- Theme Secondary: rgba(6, 169, 156, 1)
+- Theme Dark: rgba(74, 30, 71, 1)
+- Theme Light: rgb(74 30 71 / 50%)
+- Theme Border: rgb(74 30 71 / 70%)
+- Theme Background: rgb(74 30 71 / 10%)
+
+Xebia Brand Colors:
+- Xebia Purple: rgba(21, 0, 39, 1)
+- Xebia Pink: rgba(227, 49, 208, 0.9)
+
+Gradients:
+- Use 135deg linear gradients for cards, avatars, and highlights
+- Examples:
+  - Pink-Red
+  - Blue
+  - Green
+
+Implementation Notes:
+- Use modern React-based UI patterns
+- Clean component structure
+- Ready to be integrated with backend later
+- Mock data is acceptable
+
+Prompt 2: Lovable UI Prompt — Voice Interaction Interface
+You are a senior UX designer specializing in conversational and voice interfaces.
+
+Build a **dedicated web UI** for interacting with the **Xebia Voice Companion** via voice.
+
+This UI will be used to:
+- Talk to the voice agent
+- Start and stop the agent
+- View live conversation state
+
+Page Layout:
+- Centered voice interaction panel
+- Large microphone button (Start / Stop)
+- Visual feedback while agent is listening / speaking
+- Conversation transcript panel:
+  - User messages
+  - Agent responses
+- Agent status indicator:
+  - Idle
+  - Listening
+  - Thinking
+  - Speaking
+
+Features:
+- Smooth animations for voice states
+- Pulsing mic animation while listening
+- Subtle waveform or glow effect while agent is speaking
+- Error state UI (mic permission denied, agent not running)
+
+Design Language:
+- Must match **Xebia Voice Companion branding**
+- Use glassmorphism and gradients
+- Minimal, distraction-free layout
+- Dark-themed background using Xebia Purple
+- Accent highlights using Xebia Pink and Theme Secondary
+
+Typography:
+- Poppins font
+- Clear readability for transcripts
+
+Implementation Notes:
+- UI only (no backend logic)
+- Assume voice runtime integration will be added later
+- Should feel **production-ready and demo-worthy**
+``
+
+################################################################################################################################################
+
+Thanks.
+Now we will build the beautiful UI using Lovable, and handle the backend and integrations using Cursor.
+
+So please help me with a detailed prompt for generating the UI. Make sure it looks production-ready and visually appealing.
+
+Once Lovable develops the UI, we will move that code into Cursor to build the backend and complete the integrations.
+
+We also need authentication, and for that, please ask to use Supabase.
+
+Additionally, we need an informative website for this voice bot. This website should include buttons such as Login, Sign Up, or Get Started, which will redirect users to the dashboard.
+
+I also think we need a separate UI for the web interface where users will interact with the voice bot. We will create this separately, so please provide a separate prompt for that UI as well.
+
+For the UI, please use Xebia’s theme. Below is the theme information we have:
+
+1. Core Brand Identity
+
+The project follows a sleek, professional, and AI-native aesthetic, primarily branded with Xebia corporate colors while incorporating modern UI elements such as glassmorphism (transparency) and vibrant gradients.
+
+2. Typography
+
+The primary typeface is Poppins, a modern geometric sans-serif that provides excellent readability and a friendly tone.
+
+Primary Font: Poppins, sans-serif
+
+Fallback Fonts: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif
+
+Code Font: source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace
+
+Base Font Size: 13px (defined globally in App.css)
+
+Weights:
+
+Light (300)
+
+Regular (400)
+
+Medium (500)
+
+Bold (700)
+
+3. Color Palette
+3.1 Primary Theme Colors
+Name	Value	Usage
+Theme Primary	rgb(74 30 71 / 90%)	Main brand color used for Navbar, Primary Buttons, and Headers
+Theme Secondary	rgba(6, 169, 156, 1)	Complementary teal used for accents and secondary indicators
+Theme Dark	rgba(74, 30, 71, 1)	Solid version of the primary color
+Theme Light	rgb(74 30 71 / 50%)	Used for subtle highlights
+Theme Border	rgb(74 30 71 / 70%)	Default border color for themed components
+Theme Background	rgb(74 30 71 / 10%)	Light tint for container backgrounds
+3.2 Xebia Brand Colors
+Name	Value	Usage
+Xebia Purple	rgba(21, 0, 39, 1)	Deep background sections and footer-style blocks
+Xebia Pink	rgba(227, 49, 208, 0.9)	Vibrant brand accents
+4. Visual Elements
+4.1 Gradients
+
+The project uses a variety of 135° linear gradients for dynamic UI elements such as avatars and project cards:
+
+linear-gradient(135deg, rgba(255,179,186,1), rgba(255,105,130,1)) — Pink-Red
+
+linear-gradient(135deg, rgba(186,225,255,1), rgba(100,170,220,1)) — Blue
+
+linear-gradient(135deg, rgba(186,255,201,1), rgba(100,200,130,1)) — Green
+
+(And 22 others defined in src/components/utils.js)
+
+
+
+################################################################################################################################################
+
+
+Thanks. We just had a detailed mentorship session with the mentors, and they suggested something different from what we were originally thinking.
+
+They listened carefully to everything we shared and mentioned that, while the idea is solid, most banking and insurance clients do not allow third-party voice agents to be integrated with their systems due to data security and compliance concerns. Typically, such solutions must be built within the client’s own environment, which means our original BFSI-focused approach may not realistically work with actual banks or insurance companies.
+
+Instead, they suggested building a voice agent for internal Xebia use.
+
+Many employees do not want to read long documents and would prefer direct, conversational access to information. Additionally, new employees or team members joining projects often lack context about:
+
+The client
+
+The project
+
+Processes, tools, and internal knowledge
+
+An internal voice agent could help address this by:
+
+Answering questions conversationally
+
+Helping new joiners ramp up faster
+
+Assisting existing employees with project-, client-, and organization-related knowledge
+
+So, instead of focusing on BFSI, the idea is to build a Xebia-internal voice AI. Similar to how we had prebuilt templates earlier, these templates would now be Xebia-internal, project-specific, or domain-specific.
+
+Earlier, we discussed building two products, and I think we can keep that structure, but change the use case from BFSI to Xebia-internal.
+
+Specifically:
+
+Build a Voice AI Studio platform
+
+Build a separate, production-grade Xebia Voice Agent that can answer general Xebia queries or be configured for a specific internal domain
+
+We can position this as:
+
+A centralized platform where Xebia can create and manage all internal voice bots
+
+Access to the studio/dashboard would be limited to managers or specific teams responsible for creating and managing bots for their teams, domains, or projects
+
+A place to create project-specific or domain-specific agents
+
+A system to configure, run, and monitor multiple internal agents (even if only one runs at a time during the demo)
+
+################################################################################################################################################
+
+Okay, agreed.
+
+Concern #1: Loss of “Wow Factor”
+
+Internal Version:
+
+A live phone call to ask something like “What’s the PTO policy?” may feel more like an internal IT tool and less visually impressive.
+
+We will not integrate voice calls with the phone for now due to time constraints.
+
+That said, it’s acceptable if the solution doesn’t have an extreme “wow factor,” because this direction is exactly what the judges suggested or hinted at building.
+
+Concern #2: Knowledge Base Dependency
+
+Internal Version:
+
+The jury will expect real Xebia-related knowledge.
+
+They may ask questions such as:
+
+“What’s the actual PTO policy?”
+
+“Who leads the BMW project?”
+
+If we don’t use real or realistic data, the demo could feel hollow or unconvincing.
+
+Mitigation Approach:
+
+We will implement a generic RAG (Retrieval-Augmented Generation) pipeline on the backend.
+
+Since only one voice agent will run at a time, the UI will allow users to:
+
+Upload documents or PDFs under the active agent
+
+Perform RAG over those documents
+
+When the agent session ends:
+
+The uploaded documents and vector embeddings will be deleted
+
+This ensures that, at least for the demo, the agent can answer questions directly from provided documents or a temporary knowledge base, making the responses accurate and credible.
+
+Concern #3: Differentiation from Competitors
+
+It is acceptable if the solution is not highly innovative or novel.
+
+The focus is on practicality, feasibility, and alignment with what the judges expect, rather than forced innovation.
+
+################################################################################################################################################
+Okay, thanks.
+
+Now, can you please help create one UI interface where, after creating an agent, the user can test it directly on the UI?
+
+When the user clicks Test Agent, a new popup or window should open where they can:
+
+Interact with the voice agent
+
+Test the voice experience end-to-end
+
+We can explore using or adapting LiveKit’s web frontend for this purpose. LiveKit provides UI examples in their GitHub repository:
+
+https://github.com/livekit-examples/agent-starter-react
+
+Please review this repository and see whether we can customize it for our platform and integrate it as the testing interface.
+
+UI Mockups Only (No Backend Integration)
+
+For the following features, we want UI mockups only. These will not be integrated with the backend and will be shown purely as add-on showcase features. Please suggest how we can design and present these in the UI:
+
+Agent Configuration Fields
+
+While configuring an agent, can we add the following fields?
+
+Verbosity:
+Concise ←→ Detailed (slider)
+
+Formality:
+Casual ←→ Formal (slider)
+
+Language Settings:
+
+English (Indian)
+
+Hindi
+
+Tamil
+
+Telugu
+
+Kannada
+
+Marathi
+
+Auto-detect Language:
+
+Option to automatically detect the customer’s language
+
+Voice Configuration:
+
+Voice selection
+
+Voice preview (similar to what is shown in the reference screenshot)
+
+Agent Creation Flow
+
+Currently, there are four steps to create an agent:
+
+Choose Template
+
+Configure
+
+Upload Docs
+
+Review
+
+Can we add one more step before “Review” called:
+
+Tools & Integrations
+
+In this step, we can show selectable options such as:
+
+Zoho CRM
+
+Other relevant internal or external tools
+
+These will also be UI-only mockups, used to demonstrate extensibility and future capabilities.
+
+################################################################################################################################################
+PROJECT: Xebia Voice AI Studio – Dashboard UI
+OVERVIEW
+
+Create the main application dashboard for “Xebia Voice AI Studio”, a centralized internal platform where authenticated Xebia users (managers or specific teams) can create, manage, test, and monitor internal AI voice agents for projects, domains, or organizational knowledge.
+
+This is a PROTECTED APPLICATION that users access after logging in.
+Backend integration will be handled later via Cursor; this project focuses on a production-ready UI with mock data where required.
+
+DESIGN INSPIRATION
+
+Style: Modern SaaS dashboard (Vercel, Linear, Notion, Retool)
+
+Vibe: Clean, professional, AI-native, enterprise-ready
+
+Color Scheme:
+
+Primary: Deep blue (#1e40af)
+
+Accent: Cyan (#06b6d4)
+
+Background: Light gray (#f8fafc)
+
+Cards: White with subtle shadows
+
+Sidebar: Dark navy (#0f172a)
+
+Typography: Clean sans-serif (Inter)
+
+LAYOUT STRUCTURE
+Main Layout (Two-Panel)
+┌─────────────────────────────────────────────┐
+│ Sidebar (250px) │ Main Content               │
+│                 │ - Page Header              │
+│ - Logo          │ - Content Area             │
+│ - Navigation    │                            │
+│ - User Profile  │                            │
+└─────────────────────────────────────────────┘
+
+SIDEBAR (LEFT PANEL – FIXED)
+Content (Top → Bottom)
+
+Logo / Branding
+
+“Xebia Voice AI”
+
+Sub-label: “Studio”
+
+Navigation Menu
+
+🏠 Dashboard
+
+🤖 My Agents
+
+➕ Create Agent
+
+📊 Analytics
+
+📚 Knowledge Base
+
+⚙️ Settings
+
+Bottom Section
+
+Usage Stats card (mock):
+
+“3 / 10 Agents”
+
+“47 / 100 Queries”
+
+Progress bar
+
+User Profile:
+
+Avatar
+
+Name
+
+Email (truncated)
+
+Logout button
+
+Styling
+
+Dark background
+
+Active item highlighted
+
+Smooth hover transitions
+
+PAGE 1: DASHBOARD (HOME)
+Header
+
+“Welcome back, [Username]!”
+
+Subtitle: “Here’s what’s happening with your agents”
+
+CTA: Create New Agent
+
+Stats Overview (4 Cards)
+
+Active Agents
+
+Total Queries
+
+Avg Response Time
+
+Success Rate
+
+Recent Activity
+
+Timeline of last 5–7 interactions
+
+Agent name, question, status badge
+
+Quick Actions
+
+Create Agent
+
+Upload Documents
+
+View Analytics
+
+Agent Overview
+
+Grid of agent cards
+
+Each card:
+
+Agent name & icon
+
+Template used
+
+Docs count
+
+Query count
+
+Last used
+
+Actions: Test, Edit, More
+
+PAGE 2: MY AGENTS (LIST VIEW)
+
+Search
+
+Filter by template
+
+Sort options
+
+Table (desktop) / cards (mobile)
+
+Actions: Test | Edit | Delete
+
+PAGE 3: CREATE AGENT (WIZARD)
+Progress Steps (Top)
+
+1. Choose Template → 2. Configure → 3. Upload Docs → 4. Tools & Integrations → 5. Review → 6. Test Agent
+
+STEP 1: CHOOSE TEMPLATE
+
+Templates:
+
+General Xebia Assistant
+
+Project Onboarding
+
+Tech Stack Guide
+
+Client Context
+
+Grid cards with icon, description, and select button.
+
+STEP 2: CONFIGURE AGENT
+Core Fields
+
+Agent Name
+
+Description
+
+System Prompt
+
+Personality (Professional / Friendly / Empathetic)
+
+UI-Only Advanced Configuration (Mockups Only)
+
+Verbosity
+
+Slider: Concise ←→ Detailed
+
+Formality
+
+Slider: Casual ←→ Formal
+
+Language Settings
+
+English (Indian)
+
+Hindi
+
+Tamil
+
+Telugu
+
+Kannada
+
+Marathi
+
+Auto-Detect Language
+
+Toggle: “Automatically detect customer’s language”
+
+Voice Configuration
+
+Voice dropdown
+
+Voice preview button (play sample audio)
+
+Voice cards similar to modern TTS dashboards
+(UI only – no backend integration)
+
+STEP 3: UPLOAD DOCUMENTS
+
+Drag & drop
+
+PDF / DOCX / TXT
+
+Upload list with mock processing states
+
+Remove file option
+
+STEP 4: TOOLS & INTEGRATIONS (UI-ONLY)
+
+Show selectable integration cards (disabled / mock state):
+
+Zoho CRM
+
+Internal Knowledge Systems
+
+HR Tools
+
+Ticketing Systems
+
+“More coming soon” placeholder
+
+Each card:
+
+Logo
+
+Description
+
+Toggle / Connect button (disabled)
+
+Purpose: show extensibility and future readiness
+
+STEP 5: REVIEW & CREATE
+
+Summary card:
+
+Agent name
+
+Template
+
+Config summary
+
+Docs uploaded
+
+Tools selected
+
+Status: “Ready to test”
+
+Actions:
+
+Create Agent
+
+Back to Edit
+
+STEP 6: TEST AGENT (NEW REQUIREMENT)
+
+After agent creation, allow the user to test the voice agent directly from the UI.
+
+Entry Points
+
+“Test Agent” button on:
+
+Success modal
+
+Agent cards
+
+Review step CTA
+
+Behavior
+
+Opens a new modal or new window
+
+Dedicated Voice Testing Interface
+
+TEST AGENT UI (LIVEKIT-INSPIRED – UI ONLY)
+Purpose
+
+A web-based voice interaction screen inspired by LiveKit’s agent frontend:
+
+Reference:
+https://github.com/livekit-examples/agent-starter-react
+
+This UI will be:
+
+Visually integrated into Xebia Voice AI Studio
+
+Not connected to backend yet
+
+Designed for future LiveKit integration
+
+Test Interface Layout
+
+Header
+
+Agent Name
+
+Status: “Ready”
+
+Close button
+
+Main Interaction Area
+
+Large animated microphone button (center)
+
+Voice waveform animation while speaking
+
+Status text:
+
+“Listening…”
+
+“Thinking…”
+
+“Speaking…”
+
+Transcript Panel
+
+User transcript
+
+Agent response transcript
+
+Chat-style bubbles
+
+Controls
+
+Start / Stop Listening
+
+Mute
+
+Reset conversation
+
+Optional Panels
+
+Language detected (mock)
+
+Voice selected
+
+Latency (mock metric)
+
+UI Notes
+
+Glassmorphism card style
+
+Gradient mic button
+
+Smooth animations
+
+Inspired by LiveKit UX but branded for Xebia
+
+Desktop & tablet optimized
+
+PAGE 4: ANALYTICS
+
+Usage metrics
+
+Charts (line, bar, histogram)
+
+Export options (mock)
+
+PAGE 5: KNOWLEDGE BASE
+
+Uploaded documents grid
+
+Search, bulk actions
+
+Agent associations
+
+PAGE 6: SETTINGS
+
+Profile
+
+Preferences
+
+Danger zone
+
+AUTHENTICATION
+
+Supabase Auth (UI only)
+
+Protected routes
+
+Mock session handling
+
+DATA FLOW (MOCK)
+
+Use mock data
+
+LocalStorage for persistence
+
+Simulated uploads & analytics
+
+TECH STACK
+
+React + TypeScript
+
+Tailwind CSS
+
+shadcn/ui
+
+Framer Motion
+
+Recharts
+
+Supabase Auth (UI hooks)
+
+Zustand / Context
+
+SUCCESS CRITERIA
+
+✅ Production-ready SaaS UI
+✅ Clean wizard flow with 6 steps
+✅ Voice testing UI included
+✅ LiveKit-inspired test interface
+✅ Clear separation of UI-only vs future backend
+✅ Polished demo-ready experience
+
+BUILD A DASHBOARD THAT FEELS LIKE A REAL, ENTERPRISE-GRADE VOICE AI PLATFORM.
+
+BEGIN.
+
+################################################################################################################################################
+
+Okay, great. We are now almost done with the backend. As discussed, I’m sharing the UI frontend code that I generated using Lovable AI.
+
+To give you proper context: Xebia Voice AI Studio has two separate UIs.
+
+An informative product website
+We wanted a public-facing, informative product website, which we have also created using Lovable AI. This website contains all the product-related content and acts as the entry point to the platform.
+
+The Xebia Voice AI Studio Dashboard
+This is the main application UI (the dashboard) for which you are building the frontend. These two UIs will be integrated later.
+
+From the informative website, users will be able to log in or sign up to the platform. The login and signup buttons already exist on that UI and should redirect users to the dashboard after authentication.
+
+There is also a possibility that the frontend UI code includes extra features or is missing certain features compared to what our backend currently supports. Before doing any integration, I want you to list out all such mismatches and perform a compatibility / integration readiness check.
+
+Additionally, for the Voice AI Studio platform, we intentionally created UI-only mockups for certain features, such as:
+
+Verbosity: Concise ←→ Detailed (slider)
+
+Formality: Casual ←→ Formal (slider)
+
+Language settings
+
+Auto-detect language
+
+Voice configuration and voice previews
+
+These features do not need backend integration and should remain as UI mockups only.
+
+As a first step, I want you to thoroughly understand the frontend code. Please review it carefully and identify:
+
+What the frontend currently contains
+
+What features are implemented
+
+How the overall flow works
+
+Once that understanding is complete, we can proceed with integration planning.
+
+################################################################################################################################################
+
+Okay, I want you to first focus on fixing the key issues found.
+
+Important note:
+On the UI, we want to support only one voice agent running at a time. The behavior should be as follows:
+
+We will run a single generic voice agent runtime.
+
+This agent will have a RAG tool attached.
+
+User-specific or template-specific configurations (such as system prompt, personality, voice, language settings, etc.) will be loaded dynamically at runtime.
+
+From the UI perspective, it may appear as if multiple agents exist, but only one agent instance will actually run at any given time.
+
+Please keep this design constraint in mind while fixing the identified issues and making any required UI or flow adjustments.
+
+################################################################################################################################################
+
+Okay, thanks. Let’s proceed further now.
+What’s the plan from here?
+
+Let’s revisit the overall plan and clearly outline:
+
+What has already been completed
+
+What is still pending
+
+The next immediate steps
+
+################################################################################################################################################
+
+Yes, I’ve verified that the backend is working completely. Thanks.
+We’re now ready to move to Phase 5: Frontend API Integration.
+
+################################################################################################################################################
+
+I tested the flow and noticed the following issues:
+
+When clicking “Test Agent”, a new window opens but it is completely blank (white screen).
+
+After creating an agent, if I click “Back to Dashboard”, it also results in a blank screen.
+
+Please test the application thoroughly and ensure that:
+
+All UI components are properly integrated and wired together
+
+Navigation between pages works correctly
+
+The frontend is correctly integrated with the backend
+
+All relevant backend APIs are being called and are functioning as expected
+
+Once these issues are resolved, we can proceed further.
+
+################################################################################################################################################
+
+I’m seeing this error on the UI when trying to access http://localhost:8080/
+.
+
+################################################################################################################################################
+
+
+Okay, now let’s proceed with Phase 6: LiveKit Voice Integration.
+
+################################################################################################################################################
+
+Is the LiveKit integration fully completed?
+
+Since we are using LiveKit, are we using LiveKit Cloud? If so, do we need to configure the following credentials?
+
+LIVEKIT_URL
+
+LIVEKIT_API_KEY
+
+LIVEKIT_API_SECRET
+
+Please check and confirm this as well.
+
+################################################################################################################################################
+
+Thanks. A quick note:
+
+We must use LiveKit Cloud only, as Docker is not installed on my system.
+
+You are provided with LiveKit MCP, so please use it if required.
+
+Make sure that, in the LiveKit backend agent code, the RAG tool is passed correctly and strictly follows the official documentation.
+
+Additionally, after creating an agent, when the user clicks “Test Agent”, we want to open a custom testing UI.
+
+We want a web-based voice interaction screen inspired by LiveKit’s agent frontend.
+
+Reference:
+https://github.com/livekit-examples/agent-starter-react
+
+This UI should be:
+
+Visually integrated into Xebia Voice AI Studio
+
+Used as a replacement for the existing test UI
+
+Please use GitHub MCP to review the LiveKit frontend code and evaluate how we can customize and adapt it for our use case.
+
+################################################################################################################################################
+
+
+Thanks. A quick change here:
+
+We want to use the realtime pipeline for our agent instead of the traditional STT → LLM → TTS pipeline. This way, we won’t need separate STT and TTS models, and it will also help reduce overall latency.
+
+So, please use the Gemini 3 Flash Realtime model for the agent.
+
+Use LiveKit MCP to verify the realtime pipeline implementation and ensure the code follows the recommended approach for realtime agents.
+
+
+
+################################################################################################################################################
+
+Okay, when I create a new agent or use a prebuilt template, complete the configuration, and then click “Test Agent”, it shows “Connecting to voice agent” and a notification saying “Connection started”. However, the voice agent test UI does not appear.
+
+It stays on the same screen from where “Test Agent” was clicked.
+
+Please look into this issue.
+
+
+################################################################################################################################################
+
+
+Thanks. All the keys have now been corrected and added to the .env files for both the backend and the frontend. The test UI is opening successfully, but when I checked the backend logs for worker.py (dev), it is showing an error.
+
+################################################################################################################################################
+
+
+Okay, after that, this error is now appearing in the same file. Please take a look:
+
+################################################################################################################################################
+
+Now a new error is coming up in the same worker.py file. Please review the entire code and check whether it aligns with the latest LiveKit implementation and documentation.
+
+
+################################################################################################################################################
+
+The previous error has been resolved, but now I’m seeing the following logs in the LiveKit worker (worker.py). Please look into this:
+
+DEBUG: livekit.agents: session closed
+23:01:26.318 DEBUG  livekit.agents  session closed
+{
+  "reason": "error",
+  "error": "type='realtime_model_error'
+  timestamp=1768152681.597197
+  label='livekit.plugins.google.realtime.realtime_api.RealtimeModel'
+  error=ConnectionClosedError(
+    Close(code=1008,
+    reason='models/gemini-2.5-flash is not found for API version v1beta,
+    or is not supported for bidiGenerateContent. Call ListModels'),
+    Close(code=1008,
+    reason='models/gemini-2.5-flash is not found for API version v1beta,
+    or is not supported for bidiGenerateContent. Call ListModels'),
+    True
+  )
+  recoverable=False"
+}
+
+
+It looks like the specified Gemini model (gemini-2.5-flash) is either not available for the v1beta API version or does not support bidiGenerateContent. Please verify the correct realtime-compatible Gemini model and API version as per the latest LiveKit and Google Gemini documentation.
+
+
+################################################################################################################################################
+
+Thanks. It’s working now—I’m able to hear audio and interact with the agent. However, when I create a new agent with a custom prompt and upload custom documents, the agent does not behave according to the provided instructions, nor does it seem to use the RAG knowledge base from the uploaded documents.
+
+Please check the following:
+
+From where is the agent currently receiving its system prompt?
+
+Are the UI configurations (custom prompt, template settings, etc.) being passed correctly to the backend?
+
+Is the agent actually using those configurations at runtime?
+
+Is the RAG setup correctly connected and being invoked with the uploaded documents?
+
+The agent should strictly behave according to the prompt and knowledge provided from the UI.
+
+
+################################################################################################################################################
+
+Hi, even after this fix, the agent is still not behaving according to the provided instructions. Please debug this issue and check whether the configuration taken from the UI is actually being passed to the agent and whether the agent is running with that configuration.
+
+################################################################################################################################################
+
+I used the pirate assistant prompt you shared and entered it in the System Prompt field while creating the agent in the UI, but the agent still did not respond in that style. It also failed to answer questions based on the document I uploaded.
+
+Please check the following in detail:
+
+Where exactly are we passing the system prompt in the LiveKit agent setup?
+
+Are the UI configurations (prompt, template settings, etc.) actually being forwarded to the agent runtime?
+
+How are the tools being passed to the agent, and are they being invoked correctly?
+
+Are embeddings being created for the uploaded documents, and is the RAG pipeline wired correctly?
+
+Is the agent actually querying the vector store during responses?
+
+Please review the LiveKit code thoroughly and ensure the agent is running with the prompt, tools, and knowledge provided from the UI.
+
+################################################################################################################################################
+
+I created a new agent as you suggested and tested it. Initially, it responded with “Ahoy matey”, but after that it reverted to behaving like a normal voice assistant. When I asked questions about the uploaded policy document, it was not able to answer them.
+
+####################################################################################################################################################
+
+Thanks. The agent is now receiving our instructions correctly and is behaving as expected. However, it is still unable to answer questions based on the knowledge base documents. Instead, it responds with something like “I am currently unable to fetch this due to a technical issue.”
+
+Please review the logs and look into this issue.
+
+
+################################################################################################################################################
+
+
+Okay, thanks. Everything is now working perfectly as per the requirements. However, on the UI side, there is one issue related to the Knowledge Base page.
+
+On the Knowledge Base page (“Manage documents that power your AI agents”), it currently shows “No documents found.” Now we need to think about knowledge base management and how we want to handle it at the agent level.
+
+Here are the points we need to clarify and implement:
+
+Should the Knowledge Base show documents per agent?
+
+If a user uploads documents under a specific agent, those documents should:
+
+Be added to that agent’s dedicated vector DB index
+
+Be immediately available when the agent is re-run or tested
+
+The agent should be able to answer questions based on newly added documents without any issues.
+
+Users should be able to add and delete documents from this section.
+
+Any update here should be correctly reflected in the backend and vector store for the corresponding agent.
+
+Please review this flow and suggest how we can design and implement agent-specific knowledge base management to achieve this behavior.
+
+################################################################################################################################################
+
+
+Okay, everything is working fine now. However, from the Agent List, when we click on Edit for an agent, we are not able to edit it. Instead, it shows a 404 error with the message:
+
+“Oops! Page not found”
+“Return to Home”
+
+This appears on a new screen. Please fix this issue as well.
+
+################################################################################################################################################
+
+
+Okay, thanks. Now I want to update the voice bot test UI.
+
+Please go through the attached code folder named agent_starter_react, which is provided by LiveKit for creating a custom UI. Review it and see whether we can use or adapt it as the test screen for our platform.
+
+Also, check whether we can integrate a real avatar into this UI. Please review LiveKit’s support for live avatars and see how we can integrate them, including support for multiple avatar providers.
+
+Let me know what’s feasible and how we should proceed.
+
+
+################################################################################################################################################
+
+Great, it’s working perfectly. However, there’s just one issue: the test screen is not opening in full-page view—it appears smaller instead. Please look into this and update it so that the screen opens as a full window.
+
+
+
+################################################################################################################################################
+
+The avatar ID is configured in the .env file, but the avatar is not visible on the UI. Also, the agent startup process seems to be slow. Please look into both of these issues.
+
+
+################################################################################################################################################
+
+Still not able to see the avatar. Please add detailed logs and identify the issue.
+Check whether the agent is running without the avatar and verify if the custom UI we created supports avatars. If it does, please confirm that the avatar configuration is being passed correctly.
+
+
+
+################################################################################################################################################
+
+Ah, I see. After enabling video = true, the UI is now accessing the camera and my live camera feed is appearing on the screen. That part is working fine. However, the avatar is still not showing up.
+
+Please also review the attached logs and investigate why the avatar is not being rendered.
+
+
+################################################################################################################################################
+
+
+The avatar is still not appearing on the UI. I’ve attached the logs—please review them and investigate this issue. Also, use LiveKit MCP and, if needed, perform a web search to check the correct approach for avatar integration.
+
+
+################################################################################################################################################
+
+BEY provides some predefined avatars. Can we add a feature to allow users to select an avatar?
+We can show the avatar name and photo in the UI, and based on the user’s selection, we can pass the corresponding avatar ID.
+
+For reference, here are some BEY avatar IDs:
+
+Michael: 7124071d-480e-4fdc-ad0e-a2e0680f1378
+
+Nelly: b5bebaf9-ae80-4e43-b97f-4506136ed926
+
+Rahul: 2ed7477f-3961-4ce1-b331-5e4530c55a57
+
+Can we implement something like this?
+
+################################################################################################################################################
+
+BEY provides some predefined avatars. Can we add a feature that allows users to select an avatar?
+We can display the avatar name and image in the UI, and based on the user’s selection, pass the corresponding avatar ID.
+
+For this, I’ve already stored the images for these three avatars in
+@xebia_voice_platform_UI_frontend/avatar_images, with the files named after the avatar names. You can directly use these images in the UI.
+
+################################################################################################################################################
+
+Thanks. Now let’s proceed with the integration with the informational website.
+
+In the attached folder, there is pre-built UI code for the website. Please review it carefully, as we need to connect it with our current UI. The flow should be as follows:
+
+The informational website should open first.
+
+From there, when the user clicks “Visit Dashboard” (or a similar CTA), they should be redirected to our existing UI’s starting page.
+
+We do not need any authentication for this flow.
+
+Additionally, please review the website content and correct or refine it wherever required.
+
+################################################################################################################################################
+
+Can we add a UI-only mockup for a few additional options?
+
+In the Upload Documents section while creating an agent’s knowledge base, can we add a UI mockup that allows users to provide URLs as well—such as a SharePoint URL or any website URL?
+
+This will be UI-only, with no backend integration required. It will help users visualize that knowledge can be provided in multiple ways, making the platform feel more flexible and user-friendly.
+
+################################################################################################################################################
+
+Can we add a UI-only mockup for a few additional options?
+
+1. Upload Documents (Knowledge Base)
+In the Upload Documents section while creating an agent’s knowledge base, can we add a UI mockup that allows users to provide URLs as well—such as a SharePoint URL or any website URL?
+
+This will be UI-only, with no backend integration required. It will help users visualize that knowledge can be provided in multiple ways, making the platform feel more flexible and user-friendly.
+
+2. Integrations Section – Additional Mockups
+Since this is a Xebia-internal Voice AI builder platform for internal projects and domains, can we also add a UI mockup in the Integrations section to:
+
+Connect or add an MCP Server
+
+Showcase other potential internal tools or integrations (UI-only), such as:
+
+Internal APIs
+
+Knowledge repositories
+
+Project management or documentation tools
+
+These will remain mockups only, but they will clearly communicate the platform’s extensibility and future integration possibilities.
+
+
+################################################################################################################################################
+
+Can we add UI-only mockups for a few additional options?
+
+1. Upload Documents (Knowledge Base)
+
+In the Upload Documents section while creating an agent’s knowledge base, can we add UI mockups that allow users to provide URLs as additional knowledge sources?
+
+Please create separate sections for each type:
+
+SharePoint URLs
+
+GitHub Repositories
+
+Custom Website URLs
+
+This will be UI-only, with no backend integration required. It will help users visualize that knowledge can be provided through multiple sources, making the platform feel more flexible and user-friendly.
+
+2. Integrations Section – Additional Mockups
+
+Since this is a Xebia-internal Voice AI builder platform for internal projects and domains, can we also add UI mockups in the Integrations section for the following:
+
+Connect / Add an MCP Server
+
+On click, open a UI popup showing options such as:
+
+GitHub integration
+
+Another predefined integration option
+
+Add Custom (via JSON configuration)
+
+Showcase other potential internal tools or integrations (UI-only), such as:
+
+Internal APIs
+
+Knowledge repositories
+
+Project management or documentation tools
+
+These will remain mockups only, but they will clearly communicate the platform’s extensibility and future integration possibilities.
+
+################################################################################################################################################
+
+Okay, now please fix the UI alignment of the tabs and buttons on this page.
+They are currently not aligned properly.
+
+Make sure the layout looks:
+
+Structured
+
+Consistent
+
+Well-aligned (spacing, margins, and positioning)
+
+The overall UI should feel clean, organized, and visually balanced.
+
+################################################################################################################################################
+
+Okay, now can you please look into how we can add an MCP server to our LiveKit agent and get a clear understanding of the approach?
+
+After that, we need to integrate the “Add MCP Server” button from the UI.
+
+On the UI, we have three options:
+
+GitHub – UI mockup only
+
+Predefined – UI mockup only
+
+Custom – this one we will actually integrate
+
+So, only the Custom MCP option needs backend integration.
+
+Please check:
+
+How LiveKit agents accept or integrate an MCP server
+
+How we should accept MCP details from the user in the UI
+
+How to pass and register the MCP configuration in the backend
+
+Also, verify whether:
+
+When an MCP server is added, we need to update the system prompt to inform the agent that it has access to an MCP server and should use it when required
+
+Please analyze this end-to-end and suggest the correct implementation approach.
+
+
+################################################################################################################################################
+
+I added the GitHub MCP server and connected it successfully. However, when I asked the agent to list all repositories, it had some trouble responding. Below are the logs for reference:
+
+################################################################################################################################################
+
+
+Perfect. Now, could you please review the main plan and let us know what is still remaining to be done?
+
+
+################################################################################################################################################
+
+Only one issue remains: if the user does not upload any document in the Upload Documents step, an error occurs while creating the agent. It seems like document upload is currently treated as mandatory, but in a real-world scenario it should be optional. Please fix this so that the agent can be created even when no documents are uploaded.
+
+################################################################################################################################################
+
+Only one issue remains: if the user does not upload any document in the Upload Documents step, an error occurs while creating the agent. Currently, document upload is treated as mandatory, but in a real-world scenario it should be optional. Please fix this so that the agent can be created even when no documents are uploaded.
+
+Also, on the UI there is a Choose an Avatar button with an option for “No Avatar / Audio Only.” However, if I select that option, the Emma avatar still appears in the UI. Please fix this behavior so that no avatar is shown when the user chooses audio-only mode.
+
+################################################################################################################################################
+
+Perfect! Everything is done, implemented successfully, and tested as well. Thank you.
+
+Now we need to push this code to a Git repository. Please create a new Git repo with the name "Xebia Voice AI Agent Studio Platform" and push all the code to it.
+
+################################################################################################################################################
+
+Okay, thanks. As you know, we have to demonstrate this product to the judges. Below is the information shared about the evaluation process and criteria:
+
+Solution Selection Criteria
+
+After solution submission, the ideas will be evaluated by the jury members. The evaluation will take place in two parts:
+
+Panel Evaluation
+Each team will be assessed by a panel consisting of two jury members. Multiple panels will run in parallel to evaluate all teams that have a working demo ready.
+
+Final Jury Presentation
+Post panel evaluation, the top teams will present their solution to the entire jury. Based on this presentation, the final winners and runners-up will be decided.
+
+Evaluation Criteria
+
+The solutions will be evaluated based on the following parameters:
+
+Prompt clarity and level of detail
+
+Novelty of the idea
+
+Feasibility, practicality, sustainability, scalability of impact, user experience, and potential for future enhancements
+
+Real-world applicability of the solution
+
+Speed of execution and time-to-implementation
+
+Only real-time, fully working models will be eligible for the final demonstration
+
+No PPTs or sample projects will be accepted for the final demonstration with the jury members
+
+################################################################################################################################################
+
+Okay, thanks. Earlier, I mentioned that we need to maintain the prompt history. Have we implemented and maintained it properly?
+
+################################################################################################################################################
+
+🎤 Presentation Script – Xebia Voice AI Agent Studio Platform
+
+Opening (Context & Problem Statement)
+
+Good morning everyone.
+Today, we are presenting Xebia Voice AI Agent Studio Platform, a real-time, production-ready voice AI system designed specifically for Xebia’s internal teams and projects.
+
+During our mentorship sessions, we received an important insight:
+Most BFSI organizations do not allow third-party voice agents due to strict data security and compliance requirements. Such solutions usually need to be deployed entirely within the client’s own environment.
+
+So instead of forcing an impractical BFSI use case, we pivoted to a real, high-impact, and immediately usable problem within Xebia itself.
+
+🧩 Problem We Are Solving
+
+Inside Xebia, employees often struggle with:
+
+Reading long documents and policies
+
+Understanding project context
+
+Learning about clients, tools,
+
+################################################################################################################################################
+
+Okay, can you please give me a detailed presentation script that I can read? Make sure it clearly covers everything we have created and presents it in the best possible way.
+
+################################################################################################################################################
+
+Okay, can you please provide a detailed presentation script that I can read directly or use as a reference? Make sure it covers all parts of our product, clearly highlights the USP, and presents everything in the best possible way.
+
+Also, please think through potential counter-questions from the judges and include well-prepared answers for them
+
+################################################################################################################################################
+
+
+We have multiple files and folders in this repository, and now we need to push all the code to GitHub. Please guide me on which files should be pushed and which should not. Also, check whether the .gitignore file is correctly configured, because we will be sharing the final GitHub repository with the jury.
+
+Our mentors also suggested creating an updated and detailed README.md file for the repository. It should clearly explain our product and also explicitly address the evaluation criteria, including:
+
+Novelty of the idea
+
+Feasibility, practicability, sustainability, scale of impact, user experience, and potential for future work progression
+
+Real-world usability of the solution
+
+How quickly the solution can be executed or adopted
+
+So, first, please help create a strong and well-structured README.md file, and then guide me step by step on how to prepare the repository and deploy or publish it properly for submission.
+
+################################################################################################################################################
+
+
+Done. I’ve pushed the code. Now I want to clear all existing agents and database values so we can start with a clean slate for the demo. We plan to keep only three agents ready on the UI.
+
+So, first, please clean all the existing data. Then, provide me with all the required information to create the new agents—such as agent names, detailed system prompts, and any other necessary configuration.
+
+Also, make sure the agents are Xebia-specific:
+
+One agent for Delta Airlines
+
+One agent for Holland America Cruise Line
+
+One agent for Xebia’s internal CoE team
+
+I have already created PDF files for each of these and will upload them to the respective agents.
+
+################################################################################################################################################
+
+################################################################################################################################################
